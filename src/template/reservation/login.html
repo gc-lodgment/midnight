@@ -1,0 +1,65 @@
+@@include('../include/_head.html', {
+	"page": "page-reservation"
+})
+
+	<!--페이지 전용 Css & Script-->
+    <link rel="stylesheet" href="http://static.ocean2you.co.kr/css/new/layout2.css">
+    <link rel="stylesheet" href="http://static.ocean2you.co.kr/go/css/totalweb.css">
+	
+</head>
+<body class="page-reservation">
+
+<div class="wrapper">
+	@@include('../include/_header.html')
+
+	<div class="contents reservation">
+		<h2 class="skip">객실예약</h2>
+	</div>
+	<!--//.contents-->
+	
+	<!-- 예약페이지 가져오기 , 아래 부분은 개발단에서 작업(아래는 예시)-->
+	<section class="login" id="setTop">
+        <div class="container">
+            
+            <div id="customer">
+                <div class="Login clr">
+                    <div class="naverLogin">
+                        <h4>간단하게 로그인</h4>
+                        <ul class="snsLarge clr">
+                            <li class="naver">
+                                <a href="javascript:total_login('naver')"><img src="http://img.ocean2you.co.kr/go/mobile/n_logo.jpg">&nbsp;&nbsp;<span>네이버 아이디로 로그인</span></a>
+                            </li>
+                            <li class="kakao">
+                                <a href="javascript:total_login('kakao')"><img src="http://img.ocean2you.co.kr/go/mobile/k2_logo.jpg">&nbsp;&nbsp;<span>카카오톡 아이디로 로그인</span></a>
+                            </li>
+                            <li class="facebook">
+                                <a href="javascript:total_login('facebook')"><img src="http://img.ocean2you.co.kr/go/mobile/f_logo.jpg">&nbsp;&nbsp;<span>페이스북 아이디로 로그인</span></a>
+                            </li>
+                            <!--<li class="daum">
+                                <a href="javascript:total_login('daum')"><img src="http://img.ocean2you.co.kr/go/mobile/daum_logo.jpg">&nbsp;&nbsp;<span>다음 아이디로 로그인</span></a>
+                            </li>-->
+                            <li class="google">
+                                <a href="javascript:total_login('google')"><img src="http://img.ocean2you.co.kr/go/mobile/g_logo.jpg" width="25">&nbsp;&nbsp;<span>구글 아이디로 로그인</span></a>
+                            </li>
+                        </ul>
+                        <div class="alert clr">
+                            <div class="img"><img src="http://img.ocean2you.co.kr/go/icon_alert.jpg"></div>
+                            <div class="text">
+                                <!-- <span>신규가입시 70,000원 쿠폰팩 증정, 결제금액 1% 적립</span><br>  -->
+                                로그인/회원가입 시 이용약관, 개인정보취급방침에 동의하게 됩니다.<br> 회원가입시 SMS/메일링 수신에 동의합니다.<br>
+                                오션투유리조트 속초설악비치 호텔앤콘도 의 온라인 공식 대행 여행사 [고코투어]로 로그인됩니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	<!-- /.login -->
+
+
+	@@include('../include/_footer.html') 
+</div>
+
+</body>
+</html>

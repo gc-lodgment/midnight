@@ -2,46 +2,18 @@
 
 @import "../parts/common";
 
-.header {
-    height: auto;
-}
-
-.footer {
-    margin-top: 0;
-}
-
 /* 비주얼 영역 */
 .sec.visual {
     .slider-container {
         position: relative;
-        .slide > img {
-            margin: 0 auto;
-        }
-        .row-btn {
-            @include position(absolute, null, null, 120px);
-            width: 100%;
+        .slide {
+            height: 319px;
+            background: url('http://design.autopay.co.kr/joon/midnight/img/about/visual_01.jpg') no-repeat center;
         }
     }
 }
-/* 소개 영역 */
-.sec.intro {
-    .row-black {
-        padding: 50px 0;
-        background: #000;
-        text-align: center;
-        h1 {
-            font-size: 22px;
-            color: #fff;
-            strong {
-                line-height: 1.5;
-                font-size: 33px;
-                margin-bottom: 5px;
-            }
-        }
-        .mipic {
-            margin-top: 30px;
-        }
-    }
+/* 공통스타일 영역 */
+.sec.common-01 {
     .row-txt {
         padding: 35px 0;
         h2 {
@@ -49,6 +21,7 @@
             line-height: 1.8;
             font-size: 34px;
             font-weight: 700;
+            letter-spacing: -1.5px;
         }
         > p {
             text-align: center;
@@ -67,17 +40,18 @@
         }
     }
     .photo-box {
+        padding-bottom: 75px;
         overflow: hidden;
         .list {
             width: 970px;
             font-size: 0;
             margin-top: -12px;
             > li {
-                display: inline-block;
+                // display: inline-block;
                 margin-top: 12px;
-                width: 33.33%;
+                // width: 33.33%;
                 box-sizing: border-box;
-                padding: 0 6px;
+                // padding: 0 6px;
                 > img {
                     display: block;
                     width: 100%;

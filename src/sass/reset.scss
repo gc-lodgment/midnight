@@ -12,7 +12,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, main {
     margin: 0;
     padding: 0;
     border: 0;
@@ -23,7 +23,7 @@ time, mark, audio, video {
 }
 
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, menu, nav, section, main {
     display: block;
 }
 body {
@@ -46,31 +46,24 @@ table {
 }
 
 
-
-fieldset, img {border:0}
-
-img, input, button, select, textarea {margin:0; padding:0; vertical-align:middle}
-
-caption, th {text-align:left }
-
-q:before, q:after {content :''}
-
-button::-moz-focus-inner, input::-moz-focus-inner{padding:0; border:0;}
-
-caption, legend{width:0; height:0; font-size:0; line-height:0; text-indent:-9999px; visibility:hidden;}
-
-label {cursor: pointer;}
-
 a {text-decoration: none; color: inherit;}
 
+button, label {cursor: pointer;}
+
+button::-moz-focus-inner, input::-moz-focus-inner {padding: 0; border: 0;}
+
+caption, legend{width: 0; height: 0; font-size: 0; line-height: 0; text-indent: -9999px; visibility: hidden;}
+
+// caption, th {text-align: left}
+
+// img, input, button, select, textarea {margin: 0; padding: 0; vertical-align: middle}
+
+/* -- custom class -- */
 /* hidden_class */
-.hidden, .skip {width:0; height:0; margin:0; padding:0; overflow:hidden; line-height:0; font-size:0; visibility:hidden; position:absolute; left:0; top:0}
+.text-hide, .hidden, .skip {width: 0; height: 0; font: 0 / 0 arial; text-indent: -9999px; visibility: hidden;}
 
 .clr:before, .clr:after, .cf:after {content: ""; display: table;}
 .clr:after, .cf:after {clear: both;}
-
-/* button */
-button[type=button] {cursor: pointer;}
 
 /* backDrop */
 #backDrop, .backDrop {position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: block;}

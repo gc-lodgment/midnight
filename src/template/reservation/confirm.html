@@ -1,0 +1,100 @@
+@@include('../include/_head.html', {
+	"page": "page-reservation"
+})
+
+	<!--페이지 전용 Css & Script-->
+    <link rel="stylesheet" href="http://static.ocean2you.co.kr/css/new/layout2.css">
+    <link rel="stylesheet" href="http://static.ocean2you.co.kr/go/css/totalweb.css">
+	
+</head>
+<body class="page-reservation">
+
+<div class="wrapper">
+	@@include('../include/_header.html')
+
+	<div class="contents reservation">
+		<h2 class="skip">객실예약</h2>
+	</div>
+	<!--//.contents-->
+	
+	<!-- 예약페이지 가져오기 , 아래 부분은 개발단에서 작업(아래는 예시)-->
+	<section class="history" id="setTop">			
+			<div class="clr"></div>	 
+		<!-- wrapper -->
+		<div id="wrapper">
+		<div id="container">
+			<div class="subNavi">
+				<ul>
+					<li><img src="http://img.ocean2you.co.kr/go/home_icon.jpg"><span>&gt;</span></li>
+					<li>예약내역조회</li>
+				</ul>
+			</div>
+			<div class="title">
+				<h2>예약내역조회</h2>
+			</div>
+			<div class="sub_wrap">
+				<div class="reservation_list">
+					<ul class="tab">
+						<li onclick="location.href='http://ocean2you.co.kr/history/?dd=Sws5TzdVKg==&amp;tgubun=SBIs'">전체</li>
+						<li class="on" onclick="location.href='http://ocean2you.co.kr/history/?dd=Sws5TzdVKg==&amp;tgubun=QBAn'">
+											예약 진행중인 상품
+											</li>
+						<li onclick="location.href='http://ocean2you.co.kr/history/?dd=Sws5TzdVKg==&amp;tgubun=Sh8uQDtK'">					
+											예약불가 및 취소상품
+											
+						</li>
+					</ul>
+	
+					<ul class="period">
+						<li><a href="http://ocean2you.co.kr/history/?dd=Sws5TzdVKg==&amp;period=year&amp;tgubun=QBAn" title="1년"><img src="http://img.ocean2you.co.kr/go/btn_period4.jpg" alt="1년" id="year"></a></li>
+						<li><a href="http://ocean2you.co.kr/history/?dd=Sws5TzdVKg==&amp;period=6month&amp;tgubun=QBAn"><img src="http://img.ocean2you.co.kr/go/btn_period3.jpg" alt="6개월" id="6month"></a></li>
+						<li><a href="http://ocean2you.co.kr/history/?dd=Sws5TzdVKg==&amp;period=3month&amp;tgubun=QBAn" title="3개월"><img src="http://img.ocean2you.co.kr/go/btn_period2.jpg" alt="3개월" id="3month"></a></li>
+						<li><a href="http://ocean2you.co.kr/history/?dd=Sws5TzdVKg==&amp;period=all&amp;tgubun=QBAn"><img src="http://img.ocean2you.co.kr/go/btn_period1.jpg" alt="전체" id="all"></a></li>
+					</ul>
+	
+					<table class="member_info_t">
+						<colgroup>
+							<col width="150">
+							<col width="350">
+							<col width="180">
+							<col width="150">
+							<col width="150">
+						</colgroup>
+						<tbody>
+						<tr>
+							<th>접수일자</th>
+							<th>숙소명</th>
+							<th>투숙일</th>
+							<th>예약상태</th>
+							<th>출력하기</th>
+						</tr>
+											<tr>
+							<td colspan="5">예약/구매 내용이 없습니다.</td>
+						</tr>
+											</tbody>
+					</table>
+	
+					<div id="number2" style="margin-bottom:60px">
+											<span><img alt="첫 페이지" src="http://img.ocean2you.co.kr/go/btn_pre02.jpg"></span>
+						<span style="margin-right: 10px;"><img alt="이전 페이지" src="http://img.ocean2you.co.kr/go/btn_pre01.jpg"></span>
+						<span class="page_ov">&nbsp;1&nbsp;</span> 					<span style="margin-left: 10px;"><img alt="다음 페이지" src="http://img.ocean2you.co.kr/go/btn_next01.jpg"></span>
+						<span><img alt="끝 페이지" src="http://img.ocean2you.co.kr/go/btn_next02.jpg"></span>
+										</div>
+	
+	
+				</div>
+			</div>
+		</div>
+		<!-- container 끝-->
+		</div>
+		<!-- wrapper끝-->
+	
+	
+			<div class="clr"></div>			
+		</section>
+
+	@@include('../include/_footer.html') 
+</div>
+
+</body>
+</html>
