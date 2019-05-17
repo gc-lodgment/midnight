@@ -10,7 +10,7 @@ body {
 	letter-spacing: -0.5px;
 }
 
-/*전체 wrapper*/
+/* 전체 영역 */
 .wrapper {
 	min-width: 960px;
 }
@@ -138,7 +138,7 @@ body {
 	}
 }
 
-/* 일별 소개 */
+/* 일별 소개 영역 */
 .row-day {
     background: #000;
     text-align: center;
@@ -146,7 +146,7 @@ body {
     color: #fff;
     h1 {
         padding: 25px 0;
-        line-height: 1.4;
+        line-height: 1.35;
         background: url('http://design.autopay.co.kr/joon/midnight/img/common/txt_midnight.png') no-repeat right -37px;
     }
     span {
@@ -160,4 +160,9 @@ body {
             letter-spacing: -0.7px;
         }
     }
+}
+
+/* 배너 영역 */
+.bn-container {
+
 }
