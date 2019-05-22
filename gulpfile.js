@@ -27,6 +27,7 @@ gulp.task('mobile', ['browserSync_m', 'watch_m']);
 
 gulp.task('browserSync', ['template', 'sass', 'js'], function() {
 	return browserSync.init({
+		port: 3000,
 		server: {
 			baseDir: './dist'
 		}
@@ -34,6 +35,7 @@ gulp.task('browserSync', ['template', 'sass', 'js'], function() {
 });
 gulp.task('browserSync_m', ['template_m', 'sass', 'js'], function() {
 	return browserSync.init({
+		port: 3001,
 		server: {
 			baseDir: './dist'
 		}

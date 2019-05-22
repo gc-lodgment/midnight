@@ -3,13 +3,34 @@
 // Scss변수
 // --------------
 // 주요 폰트 및 벌러
-$font-stack: "Noto Sans KR", sans-serif;
-$primary-color: #333;
+$font-stack: "NanumSquareRound", sans-serif;
+$primary-color: #222;
+
 // 폰트
-// $font-nnGothic: "Nanum Gothic", Sans-serif;
-// $font-nnSquare: "Nanum Square", "NanumSquare", Sans-serif;
-// $font-nnrSquare: "NanumSquareRound", Sans-serif;
+$font-nnGothic: "Nanum Gothic", Sans-serif;
+$font-nnSquare: "Nanum Square", "NanumSquare", Sans-serif;
+$font-nnSquareR: "NanumSquareRound", Sans-serif;
+
 // 색상
-$fg-name: #0041e7;
+$white: #fff;
+$fg-blue: #186aff;
+$fg-red-1: #e82600;
+// $fg-blue-1: #0041e7;
+// $fg-blue-2: #004885;
+// $fg-blue-3: #005eae;
+// $fg-blue-4: #416b8e;
+
 // 배경
 $bg-name: #0041e7;
+// $bg-blue-1: #0061b4;
+// $bg-blue-2: #7eaace;
+// $bg-blue-3: #005aa7;
+// $bg-blue-4: #618eb4;
+
+// Border 색상
+$bor-gray-1: #cecece;
+
+//줄간격
+$lh-1: 1.5;
+$lh-2: 1.6;
+$lh-3: 1.3;

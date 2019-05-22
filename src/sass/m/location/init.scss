@@ -15,30 +15,25 @@
 /* 공통 스타일 영역 */
 .sec.common-01 {
     .row-txt {
-        padding: 35px 0;
+        padding: 15px 0;
         h2 {
             text-align: center;
             line-height: 1.8;
-            font-size: 34px;
+            font-size: 15px;
             font-weight: 700;
             letter-spacing: -1.5px;
         }
         > p {
             text-align: center;
+            font-size: 12px;
+            line-height: 1.5;
         }
-        .p-1 {
-            font-size: 24px;
-        }
-        .p-2 {
-            font-size: 26px;
-        }
-        
     }
 }
 /* 오시는 길 영역 */
 .sec.location {
     .map-box {
-        padding-bottom: 75px;
+        padding-bottom: 30px;
         overflow: hidden;
         .map-desc {
             dl {
@@ -46,16 +41,17 @@
                 font-size: 0;
                 line-height: 1.4;
                 > * {
-                    display: inline-block;
-                    vertical-align: top;
+                    // display: inline-block;
+                    // vertical-align: top;
                 }
                 dt {
-                    width: 160px;
-                    font-size: 20px;
+                    // width: 160px;
+                    font-size: 13px;
+                    font-weight: 700;
                 }
                 dd {
-                    display: 800px;
-                    font-size: 18px;
+                    // display: 800px;
+                    font-size: 12px;
                     .map-park {
                         margin-top: 20px;
                     }
@@ -68,7 +64,7 @@
 /* FAQ 영역 */
 .sec.faq {
     .faq-box {
-        padding-bottom: 80px;
+        padding-bottom: 35px;
         dl {
             margin-top: 20px;
             line-height: 1.4;

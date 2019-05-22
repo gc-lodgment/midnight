@@ -6,33 +6,28 @@
 .sec.visual {
     .slider-container {
         position: relative;
-        .slide {
-            height: 319px;
-            background: url('http://img.mipic-festival.co.kr/surfing/visual_01.jpg') no-repeat center;
+        .slide > img {
+            margin: 0 auto;
+            display: block;
         }
     }
 }
 /* 공통스타일 영역 */
 .sec.common-01 {
     .row-txt {
-        padding: 35px 0;
+        padding: 15px 0;
         h2 {
             text-align: center;
             line-height: 1.8;
-            font-size: 34px;
+            font-size: 15px;
             font-weight: 700;
             letter-spacing: -1.5px;
         }
         > p {
             text-align: center;
+            font-size: 12px;
+            line-height: 1.5;
         }
-        .p-1 {
-            font-size: 24px;
-        }
-        .p-2 {
-            font-size: 26px;
-        }
-        
     }
     .mv-box {
         iframe {
@@ -40,10 +35,9 @@
         }
     }
     .photo-box {
-        padding-bottom: 75px;
+        padding-bottom: 30px;
         overflow: hidden;
         .list {
-            width: 970px;
             font-size: 0;
             margin-top: -12px;
             > li {

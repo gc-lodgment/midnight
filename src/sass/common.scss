@@ -25,7 +25,7 @@ body {
 .header {
     $h: 85px;
     position: relative;
-	z-index: 51; //객실안내 페이지 인덱스가 9999라서 값 변경
+	z-index: 51;
 	width: 100%;
 	height: $h;
     border-bottom: 1px solid #cecece;
@@ -147,7 +147,7 @@ body {
     h1 {
         padding: 25px 0;
         line-height: 1.35;
-        background: url('http://design.autopay.co.kr/joon/midnight/img/common/txt_midnight.png') no-repeat right -37px;
+        background: url('http://img.mipic-festival.co.kr/common/txt_midnight.png') no-repeat right -37px;
     }
     span {
         &.s-1 {

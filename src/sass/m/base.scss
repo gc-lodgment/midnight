@@ -62,12 +62,12 @@
 #customer .Login .naverLogin .alert .text {padding-left:10px;line-height:18px; font-size: 13px; text-align: left;}
 #customer .Login .naverLogin .alert .text span {color:#ff610a}	
 
-.group {
+.group-m {
 	position: relative;
 	@include center;
 	@include clearfix;
 }
-.sec, .row {
+.group, .sec, .row {
     position: relative;
 	display: block;
 	@include clearfix;
