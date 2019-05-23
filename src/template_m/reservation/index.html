@@ -1,15 +1,2718 @@
 @@include('../include/_head.html', {
-	"page": "name"
+	"page": "reservation"
 })
 
-<body class="page-name">
+	<!--페이지 전용 Css & Script-->
+	<link rel="stylesheet" href="http://static.ocean2you.co.kr/css/new/mobile_layout3.css">
+	<link rel="stylesheet" href="http://static.ocean2you.co.kr/css/go/history_m.css">
+	<link rel="stylesheet" href="http://static.ocean2you.co.kr/go/css/totalmobile.css">
+	<link rel="stylesheet" type="text/css" href="http://static.ocean2you.co.kr/css/new/swiper.min.css?ver=20190523105257">
+	
+	<script src="http://static.ocean2you.co.kr/js/go/history_m.js"></script>
+	<script type="text/javascript" src="http://static.ocean2you.co.kr/go/js/swiper.min.js"></script>
+	
+</head>
+<body class="page-reservation">
 
 <div class="wrapper">
 	@@include('../include/_header.html')
 
-	<div class="contents">
-		콘텐츠
+	<div class="contents reservation">
+		<section class="sec visual">
+			<h1 class="skip">미드나잇 피크닉 페스티벌 2019</h1>
+			<div class="slider-container">
+				<ul class="slider">
+					<li class="slide"><img src="http://img.mipic-festival.co.kr/m/reservation/visual_01.jpg" alt="미드나잇피크닛 페스티벌"></li>
+				</ul>
+			</div>
+		</section>
+		<!--/.visual-->
+		<section class="sec common-01 ticket">
+			<div class="row-day">
+				<h1 class="group ta-left">
+					<span class="s-1">미픽2019 - 티켓예매</span><br>
+					<span class="s-2">TICKET</span>
+				</h1>
+			</div>
+		</section>
 	</div>
+	<!--//.contents-->
+	
+	<!-- 예약페이지 가져오기 , 아래 부분은 개발단에서 작업(아래는 예시)-->
+	<section class="reservation" id="setTop">
+		<div class="clr"></div>
+			
+	
+		<!--별도 고코 PC/모바일 예약하기 위치-->
+		<div id="wrapper">
+		
+	<!-- <img src="http://img.ocean2you.co.kr/go/mobile/m_price_all_banner_fxd.jpg" onclick="javascript:all_price()" id="price_report_banner_sub" style="width: 100%;height: 50px;margin-top:0px;"> -->
+	<style type="text/css">
+	#info_img_wrpa .img_txt{
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	</style>
+	<input type="hidden" name="button_text" id="button_text" value="객실 선택하기">
+		<div id="scroll_box">
+			<!-- 상단 이미지 -->
+			<div id="info_img_wrpa">
+								<img src="http://img.ocean2you.co.kr/lowest-price_grnty-m.jpg" alt="고코투어" id="lowest-price_grnty-m" style="position:absolute; top:8px; right:8px; z-index:2;">
+						
+				<!--- 이미지 슬라이드 --->
+				<div class="swiper-container swiper-container-horizontal swiper-container-android">
+					<div class="swiper-wrapper" style="transform: translate3d(-360px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="21" style="width: 360px;">
+							<div style="background:url('http://img.ocean2you.co.kr/go/mobile/thum_logo.jpg?ver=20190523105257') 100% 100%; background-size:cover">
+								<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							</div>
+						</div>	
+											<!-- 2017-07-06
+						<div class="swiper-slide watch_movie">
+							<div style="background:url('http://img.ocean2you.co.kr/mobile/m_movie_visual.png') 100% 100%; background-size:cover">
+								<img src="http://img.ocean2you.co.kr/mobile/dummy_img.png" width="100%" />
+							</div>
+						</div>
+						 -->
+						
+											
+						<div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 360px;">
+							<div style="background:url('http://file.tournspa.co.kr/tour/img1/1556773668_in1.jpg') 100% 100%; background-size:cover">
+													<div align="center" class="img_txt"><p class="img_t">외관</p></div>
+													<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							<input type="hidden" name="img_id" id="img_id_1" value="">
+							</div>
+						</div>
+											
+						<div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 360px;">
+							<div style="background:url('http://file.tournspa.co.kr/tour/img1/1514428137_in2.jpg') 100% 100%; background-size:cover">
+													<div align="center" class="img_txt"><p class="img_t">외관</p></div>
+													<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							<input type="hidden" name="img_id" id="img_id_2" value="">
+							</div>
+						</div>
+											
+						<div class="swiper-slide" data-swiper-slide-index="2" style="width: 360px;">
+							<div style="background:url('http://file.tournspa.co.kr/tour/img1/1514428137_in3.jpg') 100% 100%; background-size:cover">
+													<div align="center" class="img_txt"><p class="img_t">외관</p></div>
+													<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							<input type="hidden" name="img_id" id="img_id_3" value="">
+							</div>
+						</div>
+											
+						<div class="swiper-slide" data-swiper-slide-index="3" style="width: 360px;">
+							<div style="background:url('http://file.tournspa.co.kr/tour/img1/1491201011_in4.jpg') 100% 100%; background-size:cover">
+													<div align="center" class="img_txt"><p class="img_t">해변입구</p></div>
+													<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							<input type="hidden" name="img_id" id="img_id_4" value="">
+							</div>
+						</div>
+											
+						<div class="swiper-slide" data-swiper-slide-index="4" style="width: 360px;">
+							<div style="background:url('http://file.tournspa.co.kr/tour/img1/1514428137_in5.jpg') 100% 100%; background-size:cover">
+													<div align="center" class="img_txt"><p class="img_t">삼포해수욕장</p></div>
+													<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							<input type="hidden" name="img_id" id="img_id_5" value="">
+							</div>
+						</div>
+											
+						<div class="swiper-slide" data-swiper-slide-index="5" style="width: 360px;">
+							<div style="background:url('http://file.tournspa.co.kr/tour/img1/1491201012_in6.jpg') 100% 100%; background-size:cover">
+													<div align="center" class="img_txt"><p class="img_t">외관</p></div>
+													<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							<input type="hidden" name="img_id" id="img_id_6" value="">
+							</div>
+						</div>
+											
+						<div class="swiper-slide" data-swiper-slide-index="6" style="width: 360px;">
+							<div style="background:url('http://file.tournspa.co.kr/tour/img1/1491201012_in7.jpg') 100% 100%; background-size:cover">
+													<div align="center" class="img_txt"><p class="img_t">야경</p></div>
+													<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							<input type="hidden" name="img_id" id="img_id_7" value="">
+							</div>
+						</div>
+											
+						<div class="swiper-slide" data-swiper-slide-index="7" style="width: 360px;">
+							<div style="background:url('http://file.tournspa.co.kr/tour/img1/1491201012_in8.jpg') 100% 100%; background-size:cover">
+													<div align="center" class="img_txt"><p class="img_t">야경</p></div>
+													<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							<input type="hidden" name="img_id" id="img_id_8" value="">
+							</div>
+						</div>
+											
+						<div class="swiper-slide" data-swiper-slide-index="8" style="width: 360px;">
+							<div style="background:url('http://file.tournspa.co.kr/tour/img2/1498455550_1.jpg') 100% 100%; background-size:cover">
+													<div align="center" class="img_txt"><p class="img_t">스탠다드 마운틴뷰 콘도...</p></div>
+													<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							<input type="hidden" name="img_id" id="img_id_9" value="2299">
+							</div>
+						</div>
+											
+						<div class="swiper-slide" data-swiper-slide-index="9" style="width: 360px;">
+							<div style="background:url('http://file.tournspa.co.kr/tour/img2/1545115765_1.jpg') 100% 100%; background-size:cover">
+													<div align="center" class="img_txt"><p class="img_t">디럭스 마운틴뷰 콘도...</p></div>
+													<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							<input type="hidden" name="img_id" id="img_id_10" value="512724">
+							</div>
+						</div>
+											
+						<div class="swiper-slide" data-swiper-slide-index="10" style="width: 360px;">
+							<div style="background:url('http://file.tournspa.co.kr/tour/img2/1491201513_1.jpg') 100% 100%; background-size:cover">
+													<div align="center" class="img_txt"><p class="img_t">디럭스 오션뷰 콘도</p></div>
+													<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							<input type="hidden" name="img_id" id="img_id_11" value="5418">
+							</div>
+						</div>
+											
+						<div class="swiper-slide" data-swiper-slide-index="11" style="width: 360px;">
+							<div style="background:url('http://file.tournspa.co.kr/tour/img2/1491203676_1.jpg') 100% 100%; background-size:cover">
+													<div align="center" class="img_txt"><p class="img_t">리노베이션 오션뷰 호텔...</p></div>
+													<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							<input type="hidden" name="img_id" id="img_id_12" value="35734">
+							</div>
+						</div>
+											
+						<div class="swiper-slide" data-swiper-slide-index="12" style="width: 360px;">
+							<div style="background:url('http://file.tournspa.co.kr/tour/img2/1491203722_1.jpg') 100% 100%; background-size:cover">
+													<div align="center" class="img_txt"><p class="img_t">리노베이션 오션뷰 콘도...</p></div>
+													<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							<input type="hidden" name="img_id" id="img_id_13" value="35735">
+							</div>
+						</div>
+											
+						<div class="swiper-slide" data-swiper-slide-index="13" style="width: 360px;">
+							<div style="background:url('http://file.tournspa.co.kr/tour/img2/1493028160_1.jpg') 100% 100%; background-size:cover">
+													<div align="center" class="img_txt"><p class="img_t">리노베이션 마운틴뷰 콘도...</p></div>
+													<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							<input type="hidden" name="img_id" id="img_id_14" value="125447">
+							</div>
+						</div>
+											
+						<div class="swiper-slide" data-swiper-slide-index="14" style="width: 360px;">
+							<div style="background:url('http://file.tournspa.co.kr/tour/img2/1511245789_1.jpg') 100% 100%; background-size:cover">
+													<div align="center" class="img_txt"><p class="img_t">리노베이션 오션뷰 콘도테...</p></div>
+													<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							<input type="hidden" name="img_id" id="img_id_15" value="292540">
+							</div>
+						</div>
+											
+						<div class="swiper-slide" data-swiper-slide-index="15" style="width: 360px;">
+							<div style="background:url('http://file.tournspa.co.kr/tour/img2/1556617502_1.jpg') 100% 100%; background-size:cover">
+													<div align="center" class="img_txt"><p class="img_t">6인 도미토리 (남성/게스트...</p></div>
+													<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							<input type="hidden" name="img_id" id="img_id_16" value="548776">
+							</div>
+						</div>
+											
+						<div class="swiper-slide" data-swiper-slide-index="16" style="width: 360px;">
+							<div style="background:url('http://file.tournspa.co.kr/tour/img1/1555316119_add1.jpg') 100% 100%; background-size:cover">
+													<div align="center" class="img_txt"><p class="img_t">로비</p></div>
+													<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							<input type="hidden" name="img_id" id="img_id_17" value="">
+							</div>
+						</div>
+											
+						<div class="swiper-slide" data-swiper-slide-index="17" style="width: 360px;">
+							<div style="background:url('http://file.tournspa.co.kr/tour/img1/1555316119_add2.jpg') 100% 100%; background-size:cover">
+													<div align="center" class="img_txt"><p class="img_t">로비</p></div>
+													<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							<input type="hidden" name="img_id" id="img_id_18" value="">
+							</div>
+						</div>
+											
+						<div class="swiper-slide" data-swiper-slide-index="18" style="width: 360px;">
+							<div style="background:url('http://file.tournspa.co.kr/tour/img1/1555316119_add3.jpg') 100% 100%; background-size:cover">
+													<div align="center" class="img_txt"><p class="img_t">바베큐</p></div>
+													<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							<input type="hidden" name="img_id" id="img_id_19" value="">
+							</div>
+						</div>
+											
+						<div class="swiper-slide" data-swiper-slide-index="19" style="width: 360px;">
+							<div style="background:url('http://file.tournspa.co.kr/tour/img1/1555316120_add4.jpg') 100% 100%; background-size:cover">
+													<div align="center" class="img_txt"><p class="img_t">연회장</p></div>
+													<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							<input type="hidden" name="img_id" id="img_id_20" value="">
+							</div>
+						</div>
+											
+						<div class="swiper-slide" data-swiper-slide-index="20" style="width: 360px;">
+							<div style="background:url('http://file.tournspa.co.kr/tour/img1/1555316120_add5.jpg') 100% 100%; background-size:cover">
+													<div align="center" class="img_txt"><p class="img_t">슈퍼</p></div>
+													<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							<input type="hidden" name="img_id" id="img_id_21" value="">
+							</div>
+						</div>
+											<div class="swiper-slide" data-swiper-slide-index="21" style="width: 360px;">
+							<div style="background:url('http://img.ocean2you.co.kr/go/mobile/thum_logo.jpg?ver=20190523105257') 100% 100%; background-size:cover">
+								<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							</div>
+						</div>
+	
+					<div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" style="width: 360px;">
+							<div style="background:url('http://file.tournspa.co.kr/tour/img1/1556773668_in1.jpg') 100% 100%; background-size:cover">
+													<div align="center" class="img_txt"><p class="img_t">외관</p></div>
+													<img src="http://img.ocean2you.co.kr/go/mobile/dummy_img.png" width="100%">
+							<input type="hidden" name="img_id" id="img_id_1" value="">
+							</div>
+						</div></div>
+					<div class="thumbnail_logo" style="top:6px"><img src="http://img.ocean2you.co.kr/go/mobile/m_thumbnail_logo.png" alt="고코투어" class="thumbnail_logo_img"></div>
+					<div class="swiper-scrollbar"><div class="swiper-scrollbar-drag" style="transform: translate3d(14.6667px, 0px, 0px); transition-duration: 0ms; width: 14.6667px;"></div></div>
+					<div class="swiper-button-next" style="width:38px;height:38px"><img src="http://img.ocean2you.co.kr/go/mobile/btn_Next3.png" style="width:100%"></div>
+					<div class="swiper-button-prev" style="width:38px;height:38px"><img src="http://img.ocean2you.co.kr/go/mobile/btn_Prev3.png" style="width:100%"></div>
+					<input type="hidden" name="total_cnt" id="total_cnt" value="21">
+				</div>
+			</div>
+			<link rel="stylesheet" href="http://static.ocean2you.co.kr/css/m/init.css?var=20190523105257">
+	<script type="text/javascript" src="http://static.ocean2you.co.kr/js/m/movie.js?var=20190523105257"></script>
+	<script type="text/javascript">
+		function ocean_movie(type) {
+			switch(type) {
+				case "show":
+					$("#ocean_movie").show();
+					startVideo();
+				break;
+				default:
+					$("#ocean_movie").hide();
+					stopVideo();
+				break;
+			}
+		}
+	var tag = document.createElement('script');
+	tag.src = "https://www.youtube.com/iframe_api";
+	var firstScriptTag = document.getElementsByTagName('script')[0];
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	function onYouTubeIframeAPIReady(fileName) {
+		var player = new YT.Player('player', {
+			height: '100%',
+			width: '100%',
+			videoId: '3sUzvwZXH-8',
+			rel : 0, //0으로 해놓아야 재생 후 관련 영상이 안뜸
+			autoplay : 1,
+			events: {
+				'onReady': onPlayerReady,
+				'onStateChange': onPlayerStateChange
+			}
+		});
+	}
+	function onPlayerStateChange(event) {
+		if(event.data === 0) {
+			//여기에 재생이 끝났을 때 실행시킬 스크립트 작성
+			$("#ocean_movie").hide();
+		}
+	}
+	function onPlayerReady(event) {
+		if($("#ocean_movie").css("display") != "none") {
+			event.target.playVideo();
+		}
+	}
+	function stopVideo() {
+		var div = document.getElementById("player");
+		var iframe = $("#player")[0].contentWindow;
+		iframe.postMessage('{"event":"command","func":"pauseVideo","args":""}','*');
+	}
+	function startVideo() {
+		var div = document.getElementById("player");
+		var iframe = $("#player")[0].contentWindow;
+		iframe.postMessage('{"event":"command","func":"playVideo","args":""}','*');
+	}
+	
+	/*jQuery(window).bind("orientationchange", function(e) { // 가로세로 전환 처리
+		var orientation = window.orientation;
+	
+		if (orientation == 90 || orientation == -90) {
+			jQuery("#player").tubeplayer({
+				allowFullScreen: "true"
+			})
+		} else {
+		}
+	
+	});*/
+	</script>
+	<!-- 2017-07-06 영상부분 -->
+	<div class="movie_layer" id="ocean_movie" style="display:none;">
+		<div class="movie_area">
+			<div class="movie_inner">
+				<div>
+					<iframe id="player" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="100%" height="100%" src="https://www.youtube.com/embed/3sUzvwZXH-8?enablejsapi=1&amp;origin=http%3A%2F%2Focean2you.co.kr&amp;widgetid=1"></iframe>
+				</div>
+			</div>
+			<a href="javascript:ocean_movie();" class="movie_close"><img src="http://img.ocean2you.co.kr/movie_close.png" alt="" style="width:28px;"></a>
+		</div>
+	</div>
+	<!-- // 2017-07-06 영상부분 -->
+			<!-- 타이틀
+			<div id="pruduct_tit_w" style="background:#ffffff">
+				<div class="pruduct_tit">
+					<span class="icon"><img src="http://img.ocean2you.co.kr/new/mobile/icon_resort.png" height="17px" /> </span>				오션투유리조트속초설악비치호텔앤콘도			</div>
+			</div>
+			 -->
+			
+				<img src="http://img.ocean2you.co.kr/renew/tbn_breakfast_m.jpg" alt="평일아침조식무료" width="100%" class="show-xs">
+		 <!-- 181122 패키지 메뉴 추가 -->
+		<div class="package-menu-area">
+			<ul class="package-menu-list clr" style="/*background:#f8f8f8;*/">
+				<li class="nth-1 on pack_tab_none"><a href="javascript:package_view('');"><span>객실단품</span></a></li>
+							<li class="nth-2 pack_tab_302226"><a href="javascript:package_view('302226');"><span>한화설악 워터피아 패키지</span></a></li>
+							<li class="nth-3 pack_tab_302310"><a href="javascript:package_view('302310');"><span>속초 액션 패키지</span></a></li>
+							<li class="nth-4 pack_tab_35077 pack_on" style="display: none;"><a href="javascript:package_view('35077');"><span>델피노설악 아쿠아월드 패키지</span></a></li>
+							<li class="nth-5 pack_tab_332551 pack_on" style="display: none;"><a href="javascript:package_view('332551');"><span>척산온천 패키지</span></a></li>
+							<li class="nth-6 pack_tab_35080 pack_on" style="display: none;"><a href="javascript:package_view('35080');"><span>양양쏠비치 아쿠아월드 패키지</span></a></li>
+							<li class="nth-7 pack_tab_waterpark pack_on" style="display: none;"><a href="javascript:package_view('waterpark');"><span>롯데리조트 워터파크 패키지</span></a></li>
+						</ul>
+		</div>
+			<script type="text/javascript">
+			var pkgBox = $('.package-menu-area .package-menu-list');
+			var pkgBoxH = pkgBox.find('li a').height();
+	
+			pkgBox.find('li a').on('click', function(){
+				//console.log('click')
+				$(this).parents('li').addClass('on').siblings('li').removeClass('on');
+	
+				if($(this).parents('li.on').find('span').height() !== pkgBoxH) {
+					$(this).find('span').addClass('on')
+				} else {
+					$(this).find('span').removeClass('on')
+				}
+			});
+			function package_view(val) {
+				$("input[name='pack_gubun']").val(val);
+				$(".pack_tab_"+val).addClass('on').siblings('li').removeClass('on');
+				$(".pack_sub_"+val).hide();
+				var top = $('.package-menu-area').height();
+				var sub = $("#info_img_wrpa").height()+120;
+				$( 'html, body' ).animate( { scrollTop : sub }, 400 );
+				//room.set_load();
+				booking.find_room();
+			}
+		</script>
+		<!-- END : 패키지 메뉴 추가 -->
+		<form name="rsch_form" id="rsch_form" method="post">
+	<input type="hidden" name="find_pno" id="find_pno" value="HE93">
+	<input type="hidden" name="jehu" id="jehu" value="all">
+	<input name="hseldate" id="hseldate2" type="hidden" readonly="" value="2019-05-23">
+	<input name="nseldate" id="nseldate2" type="hidden" readonly="" value="2019-05-24">
+	<input name="prev_person" id="prev_person" type="hidden" value="1">
+	<input name="choice_sang" id="choice_sang" type="hidden">
+	<input name="choice_sanginfo" id="choice_sanginfo" type="hidden">
+	<input name="night" id="night" type="hidden" value="1">
+	
+	
+	<input name="max_choice" id="max_choice" type="hidden" value="20">
+	<input type="hidden" name="rent_filter" id="rent_filter" value="">
+	<input type="hidden" name="rent_chk" id="rent_chk" value="Y"> 
+	
+	<input type="hidden" name="pack_gubun" value="">
+	
+	<!-- 조건수정 -->
+	<!-- 인원선택 부분 주석(언제 다시 생길지 모르니 일단 주석) ---> 
+	<!-- 인원선택 정책은 일단 각 방의 기준인원이 있으니 그걸로 기본값을 넘기고 결제입력단에서 수정 --->
+	<!-- 각 이용권들 단품과 숙박상품 분리 --->
+	
+	<!-- 달력 인원수 수정 -->
+	<div id="calender_number_w">
+		
+			
+		<!-- 체크인/체크아웃-->
+		<div class="calender_ch_w">
+			<div class="calender_ch_checkin" onclick="booking_new.new_cal()">
+				<div class="title">체크인</div>
+				<div class="date"><span id="chin_text">2019.05.23 (목)</span></div>
+			</div>
+			<div class="calender_ch_checkout" onclick="booking_new.new_cal()">
+				<div class="title">체크아웃</div>
+				<div class="date"><span id="chout_text">2019.05.24 (금)</span></div>
+			</div>
+		</div>
+		<div class="calender_ch_day">
+			<div class="calender_ch_day_o"><span id="night_cnt">1박</span></div>
+		</div>
+			
+		
+		
+	</div>
+	
+	<!-- 달력 --->
+	<div id="calendar_w" style="transition:all 0.5s ease;bottom:-500px"></div>
+	
+	<!--- 달력버튼 --->
+	<div id="calendar_w_btn_w" style="display:none">
+		<!---<div class="calendar_product_btn" id="calbtn" onclick="booking_new.date_apply();">1박 선택 완료</div>--->
+		<div class="calendar_product_btn" id="calbtn" onclick="booking_new.date_apply();">예약하기</div>
+		<!---<div class="calendar_product_btn_n">선택 완료</div>--->
+	</div>
+	
+	<style>
+	#product_title {
+		margin-left: 4%;
+		padding: 20px 0 20px 0;
+		font-weight: 600;
+		color: #3f3f3f;
+		font-size: 1.125em;
+	}
+	</style>
+	<!--
+	<div style="width:99%; float:left; letter-spacing:-0.7px; margin-bottom:10px">
+		<h3 id="product_title"><img src="http://img.ocean2you.co.kr/go/mobile/slogan_icon.png" height="22px">  객실정보</h3>
+		-->
+	
+	<input type="hidden" name="change_val" id="change_val">
+	<input type="hidden" id="loading_txt" value="">
+	
+	
+	<input type="hidden" name="find_pno" value="HE93">
+	<input type="hidden" name="prev_sang" value="">
+	<input type="hidden" name="prev_night" id="prev_night" value="1">
+	<input type="hidden" name="prev_roomcnt" value="">
+	<input type="hidden" name="abr_val" value="">
+	<input type="hidden" name="pno_sub" id="pno_sub" value="517">
+	<input type="hidden" name="adult[]" id="adult" value="1">
+	</form>
+	
+	<!---- 객실리스트 나오는 공간 ------>
+	<div id="pro_list_title" style="clear:left;"></div>
+	<table id="product_info">
+	<colgroup>
+		<col width="25%">
+		<col width="75%">
+	</colgroup>
+	<tbody>
+	<tr id="product_title">
+		<td colspan="2" id="room_result" style="" class="r_on"><!--룸선택-->
+	<form name="rform" id="rform" method="post" action="http://ocean2you.co.kr/reservation/?dd=WxszRixQP1cpEUZ2TnE=">
+	<!-- <form name="rform" id="rform" method="post" action="http://ocean2you.co.kr/home/reserve/?dd=WR85fC1SO1Nx&p_no=HE93"> -->
+	<input type="hidden" name="p_no" id="p_no" value="517">
+	<input type="hidden" name="gubun" id="gubun" value="R">
+	<input type="hidden" name="res_type2" id="res_type2" value="all">
+	<input type="hidden" name="room_cnt" value="1">
+	<input type="hidden" name="hseldate" value="2019-05-23">
+	<input type="hidden" name="nseldate" value="2019-05-24">
+	
+	<input type="hidden" name="abr_val" id="abr_val" value="">
+	
+	<input type="hidden" name="person" value="1">
+	<input type="hidden" name="person_c" value="">
+	
+	<input type="hidden" name="night" value="1">
+	
+	<table id="product_info">
+	<colgroup>
+		<col width="25%">
+		<col width="75%">
+	</colgroup>
+	<tbody>
+	<style type="text/css">
+		.radio_box .font_b_black20{font-size:1.350em;color:red}
+	</style>
+	<tr>
+		<td colspan="2" height="60">
+			<div class="radio_box">
+				<input type="radio" id="548776_room" name="sang" class="chk" value="548776"> 
+				<!-- <input type="hidden" name="548776_room_hiddeninfo" id="548776_room_hiddeninfo" value="eyJpZCI6IjU0ODc3NiIsInZhbHVlIjoiNTQ4Nzc2IiwiYmFja2dyb3VuZCI6IiIsIm9uY2xpY2siOiIiLCJkaXNhYmxlZCI6IiIsInJvb21fbmFtZSI6IjZcdWM3NzggXHViM2M0XHViYmY4XHVkMWEwXHViOWFjIDxzcGFuIHN0eWxlPSdmb250LXNpemU6MTFweCc+KFx1YjBhOFx1YzEzMVwvXHVhYzhjXHVjMmE0XHVkMmI4XHVkNTU4XHVjNmIwXHVjMmE0KTxcL3NwYW4+IiwiZW5kX3N0ciI6IiIsInJfbm8iOiI1NDg3NzYiLCJybWluX251bSI6IjEiLCJybWF4X251bSI6IjEiLCJ3X3ByaWNlIjoxOTAwMCwibl9wcmljZSI6IjMzMDAwMCIsImRpc2NvdW50IjpudWxsLCJhcHBfcHJpY2UiOjE3MDAwLCJjbGFfYWRkIjoiIiwicF9ubyI6IjUxNyJ9"/> -->
+				<label for="548776_room">
+						<div class="room_info_title">
+							<p class="font_black20" id="548776_rname">
+							
+							<!--- 패키지 말머리 추가 --->
+													
+							6인 도미토리 <span style="font-size:11px">(남성/게스트하우스)</span> 						<!--<br /><div style="float:left">※ 설악워터피아 35%할인권 5인제공 </div>-->
+							</p>
+							<div class="clr row">
+								<p>
+									</p><div class="clr"></div>
+									<span class="person" style="float: none;">기준1인/최대1인</span>
+								<p></p>
+								<div class="price">
+									<del>330,000원</del>								<span class="font_b_black20">19,000원</span>
+								</div>
+							</div>
+						</div>
+									<input type="hidden" name="548776_room_pnosub" id="548776_room_pnosub" value="517">
+				</label>
+			</div>						
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="border:0">
+			<div class="room_info_box 548776_room_info" style="display:none"></div>
+		</td>
+	</tr>
+	<style type="text/css">
+		.radio_box .font_b_black20{font-size:1.350em;color:red}
+	</style>
+	<tr>
+		<td colspan="2" height="60">
+			<div class="radio_box">
+				<input type="radio" id="548777_room" name="sang" class="chk" value="548777"> 
+				<!-- <input type="hidden" name="548777_room_hiddeninfo" id="548777_room_hiddeninfo" value="eyJpZCI6IjU0ODc3NyIsInZhbHVlIjoiNTQ4Nzc3IiwiYmFja2dyb3VuZCI6IiIsIm9uY2xpY2siOiIiLCJkaXNhYmxlZCI6IiIsInJvb21fbmFtZSI6IjZcdWM3NzggXHViM2M0XHViYmY4XHVkMWEwXHViOWFjIDxzcGFuIHN0eWxlPSdmb250LXNpemU6MTFweCc+KFx1YzVlY1x1YzEzMVwvXHVhYzhjXHVjMmE0XHVkMmI4XHVkNTU4XHVjNmIwXHVjMmE0KTxcL3NwYW4+IiwiZW5kX3N0ciI6IiIsInJfbm8iOiI1NDg3NzciLCJybWluX251bSI6IjEiLCJybWF4X251bSI6IjEiLCJ3X3ByaWNlIjoxOTAwMCwibl9wcmljZSI6IjMzMDAwMCIsImRpc2NvdW50IjpudWxsLCJhcHBfcHJpY2UiOjE3MDAwLCJjbGFfYWRkIjoiIiwicF9ubyI6IjUxNyJ9"/> -->
+				<label for="548777_room">
+						<div class="room_info_title">
+							<p class="font_black20" id="548777_rname">
+							
+							<!--- 패키지 말머리 추가 --->
+													
+							6인 도미토리 <span style="font-size:11px">(여성/게스트하우스)</span> 						<!--<br /><div style="float:left">※ 설악워터피아 35%할인권 5인제공 </div>-->
+							</p>
+							<div class="clr row">
+								<p>
+									</p><div class="clr"></div>
+									<span class="person" style="float: none;">기준1인/최대1인</span>
+								<p></p>
+								<div class="price">
+									<del>330,000원</del>								<span class="font_b_black20">19,000원</span>
+								</div>
+							</div>
+						</div>
+									<input type="hidden" name="548777_room_pnosub" id="548777_room_pnosub" value="517">
+				</label>
+			</div>						
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="border:0">
+			<div class="room_info_box 548777_room_info" style="display:none"></div>
+		</td>
+	</tr>
+	<style type="text/css">
+		.radio_box .font_b_black20{font-size:1.350em;color:red}
+	</style>
+	<tr>
+		<td colspan="2" height="60">
+			<div class="radio_box">
+				<input type="radio" id="2299_room" name="sang" class="chk" value="2299"> 
+				<!-- <input type="hidden" name="2299_room_hiddeninfo" id="2299_room_hiddeninfo" value="eyJpZCI6IjIyOTkiLCJ2YWx1ZSI6IjIyOTkiLCJiYWNrZ3JvdW5kIjoiIiwib25jbGljayI6IiIsImRpc2FibGVkIjoiIiwicm9vbV9uYW1lIjoiWzJcdWM3NzhcdWJiMzRcdWI4Y2NcdWM4NzBcdWMyZGRdXHVjMmE0XHVkMGUwXHViMmU0XHViNGRjIFx1YjljOFx1YzZiNFx1ZDJmNFx1YmRmMCBcdWNmNThcdWIzYzQiLCJlbmRfc3RyIjoiIiwicl9ubyI6IjIyOTkiLCJybWluX251bSI6IjQiLCJybWF4X251bSI6IjciLCJ3X3ByaWNlIjo0OTAwMCwibl9wcmljZSI6IjMzMDAwMCIsImRpc2NvdW50IjpudWxsLCJhcHBfcHJpY2UiOjQ3MDAwLCJjbGFfYWRkIjoiIiwicF9ubyI6IjUxNyJ9"/> -->
+				<label for="2299_room">
+						<div class="room_info_title">
+							<p class="font_black20" id="2299_rname">
+							
+							<!--- 패키지 말머리 추가 --->
+													
+							[2인무료조식]스탠다드 마운틴뷰 콘도 						<!--<br /><div style="float:left">※ 설악워터피아 35%할인권 5인제공 </div>-->
+							</p>
+							<div class="clr row">
+								<p>
+									</p><div class="clr"></div>
+									<span class="person" style="float: none;">기준4인/최대7인</span>
+								<p></p>
+								<div class="price">
+									<del>330,000원</del>								<span class="font_b_black20">49,000원</span>
+								</div>
+							</div>
+						</div>
+									<input type="hidden" name="2299_room_pnosub" id="2299_room_pnosub" value="517">
+				</label>
+			</div>						
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="border:0">
+			<div class="room_info_box 2299_room_info" style="display:none"></div>
+		</td>
+	</tr>
+	<style type="text/css">
+		.radio_box .font_b_black20{font-size:1.350em;color:red}
+	</style>
+	<tr>
+		<td colspan="2" height="60">
+			<div class="radio_box">
+				<input type="radio" id="512724_room" name="sang" class="chk" value="512724"> 
+				<!-- <input type="hidden" name="512724_room_hiddeninfo" id="512724_room_hiddeninfo" value="eyJpZCI6IjUxMjcyNCIsInZhbHVlIjoiNTEyNzI0IiwiYmFja2dyb3VuZCI6IiIsIm9uY2xpY2siOiIiLCJkaXNhYmxlZCI6IiIsInJvb21fbmFtZSI6IlsyXHVjNzc4XHViYjM0XHViOGNjXHVjODcwXHVjMmRkXVx1YjUxNFx1YjdlZFx1YzJhNCBcdWI5YzhcdWM2YjRcdWQyZjRcdWJkZjAgXHVjZjU4XHViM2M0IiwiZW5kX3N0ciI6IiIsInJfbm8iOiI1MTI3MjQiLCJybWluX251bSI6IjQiLCJybWF4X251bSI6IjciLCJ3X3ByaWNlIjo1OTAwMCwibl9wcmljZSI6IjMzMDAwMCIsImRpc2NvdW50IjpudWxsLCJhcHBfcHJpY2UiOjU3MDAwLCJjbGFfYWRkIjoiIiwicF9ubyI6IjUxNyJ9"/> -->
+				<label for="512724_room">
+						<div class="room_info_title">
+							<p class="font_black20" id="512724_rname">
+							
+							<!--- 패키지 말머리 추가 --->
+													
+							[2인무료조식]디럭스 마운틴뷰 콘도 						<!--<br /><div style="float:left">※ 설악워터피아 35%할인권 5인제공 </div>-->
+							</p>
+							<div class="clr row">
+								<p>
+									</p><div class="clr"></div>
+									<span class="person" style="float: none;">기준4인/최대7인</span>
+								<p></p>
+								<div class="price">
+									<del>330,000원</del>								<span class="font_b_black20">59,000원</span>
+								</div>
+							</div>
+						</div>
+									<input type="hidden" name="512724_room_pnosub" id="512724_room_pnosub" value="517">
+				</label>
+			</div>						
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="border:0">
+			<div class="room_info_box 512724_room_info" style="display:none"></div>
+		</td>
+	</tr>
+	<style type="text/css">
+		.radio_box .font_b_black20{font-size:1.350em;color:red}
+	</style>
+	<tr>
+		<td colspan="2" height="60">
+			<div class="radio_box">
+				<input type="radio" id="5418_room" name="sang" class="chk" value="5418"> 
+				<!-- <input type="hidden" name="5418_room_hiddeninfo" id="5418_room_hiddeninfo" value="eyJpZCI6IjU0MTgiLCJ2YWx1ZSI6IjU0MTgiLCJiYWNrZ3JvdW5kIjoiIiwib25jbGljayI6IiIsImRpc2FibGVkIjoiIiwicm9vbV9uYW1lIjoiWzJcdWM3NzhcdWJiMzRcdWI4Y2NcdWM4NzBcdWMyZGRdXHViNTE0XHViN2VkXHVjMmE0IFx1YzYyNFx1YzE1OFx1YmRmMCBcdWNmNThcdWIzYzQiLCJlbmRfc3RyIjoiIiwicl9ubyI6IjU0MTgiLCJybWluX251bSI6IjQiLCJybWF4X251bSI6IjciLCJ3X3ByaWNlIjo5OTAwMCwibl9wcmljZSI6IjM1MDAwMCIsImRpc2NvdW50IjpudWxsLCJhcHBfcHJpY2UiOjk3MDAwLCJjbGFfYWRkIjoiIiwicF9ubyI6IjUxNyJ9"/> -->
+				<label for="5418_room">
+						<div class="room_info_title">
+							<p class="font_black20" id="5418_rname">
+							
+							<!--- 패키지 말머리 추가 --->
+													
+							[2인무료조식]디럭스 오션뷰 콘도 						<!--<br /><div style="float:left">※ 설악워터피아 35%할인권 5인제공 </div>-->
+							</p>
+							<div class="clr row">
+								<p>
+									</p><div class="clr"></div>
+									<span class="person" style="float: none;">기준4인/최대7인</span>
+								<p></p>
+								<div class="price">
+									<del>350,000원</del>								<span class="font_b_black20">99,000원</span>
+								</div>
+							</div>
+						</div>
+									<input type="hidden" name="5418_room_pnosub" id="5418_room_pnosub" value="517">
+				</label>
+			</div>						
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="border:0">
+			<div class="room_info_box 5418_room_info" style="display:none"></div>
+		</td>
+	</tr>
+	<style type="text/css">
+		.radio_box .font_b_black20{font-size:1.350em;color:red}
+	</style>
+	<tr>
+		<td colspan="2" height="60">
+			<div class="radio_box">
+				<input type="radio" id="125447_room" name="sang" class="chk" value="125447"> 
+				<!-- <input type="hidden" name="125447_room_hiddeninfo" id="125447_room_hiddeninfo" value="eyJpZCI6IjEyNTQ0NyIsInZhbHVlIjoiMTI1NDQ3IiwiYmFja2dyb3VuZCI6IiIsIm9uY2xpY2siOiIiLCJkaXNhYmxlZCI6IiIsInJvb21fbmFtZSI6IlsyXHVjNzc4XHViYjM0XHViOGNjXHVjODcwXHVjMmRkXVx1YjlhY1x1YjE3OFx1YmNhMFx1Yzc3NFx1YzE1OCBcdWI5YzhcdWM2YjRcdWQyZjRcdWJkZjAgXHVjZjU4XHViM2M0IiwiZW5kX3N0ciI6IiIsInJfbm8iOiIxMjU0NDciLCJybWluX251bSI6IjQiLCJybWF4X251bSI6IjciLCJ3X3ByaWNlIjo5OTAwMCwibl9wcmljZSI6IjM3MDAwMCIsImRpc2NvdW50IjpudWxsLCJhcHBfcHJpY2UiOjk3MDAwLCJjbGFfYWRkIjoiIiwicF9ubyI6IjUxNyJ9"/> -->
+				<label for="125447_room">
+						<div class="room_info_title">
+							<p class="font_black20" id="125447_rname">
+							
+							<!--- 패키지 말머리 추가 --->
+													
+							[2인무료조식]리노베이션 마운틴뷰 콘도 						<!--<br /><div style="float:left">※ 설악워터피아 35%할인권 5인제공 </div>-->
+							</p>
+							<div class="clr row">
+								<p>
+									</p><div class="clr"></div>
+									<span class="person" style="float: none;">기준4인/최대7인</span>
+								<p></p>
+								<div class="price">
+									<del>370,000원</del>								<span class="font_b_black20">99,000원</span>
+								</div>
+							</div>
+						</div>
+									<input type="hidden" name="125447_room_pnosub" id="125447_room_pnosub" value="517">
+				</label>
+			</div>						
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="border:0">
+			<div class="room_info_box 125447_room_info" style="display:none"></div>
+		</td>
+	</tr>
+	<style type="text/css">
+		.radio_box .font_b_black20{font-size:1.350em;color:red}
+	</style>
+	<tr>
+		<td colspan="2" height="60">
+			<div class="radio_box">
+				<input type="radio" id="515465_room" name="sang" class="chk" value="515465"> 
+				<!-- <input type="hidden" name="515465_room_hiddeninfo" id="515465_room_hiddeninfo" value="eyJpZCI6IjUxNTQ2NSIsInZhbHVlIjoiNTE1NDY1IiwiYmFja2dyb3VuZCI6IiIsIm9uY2xpY2siOiIiLCJkaXNhYmxlZCI6IiIsInJvb21fbmFtZSI6IlsyXHVjNzc4XHViYjM0XHViOGNjXHVjODcwXHVjMmRkXVx1YjUxNFx1YjdlZFx1YzJhNCBcdWQzYWJcdWI4ZjggPHNwYW4gc3R5bGU9J2ZvbnQtc2l6ZToxMXB4Jz4oXHViNzljXHViMzY0XHViYzMwXHVjODE1KTxcL3NwYW4+IiwiZW5kX3N0ciI6IiIsInJfbm8iOiI1MTU0NjUiLCJybWluX251bSI6IjQiLCJybWF4X251bSI6IjciLCJ3X3ByaWNlIjoxMDkwMDAsIm5fcHJpY2UiOiI0MTAwMDAiLCJkaXNjb3VudCI6bnVsbCwiYXBwX3ByaWNlIjoxMDcwMDAsImNsYV9hZGQiOiIiLCJwX25vIjoiNTE3In0="/> -->
+				<label for="515465_room">
+						<div class="room_info_title">
+							<p class="font_black20" id="515465_rname">
+							
+							<!--- 패키지 말머리 추가 --->
+													
+							[2인무료조식]디럭스 펫룸 <span style="font-size:11px">(랜덤배정)</span> 						<!--<br /><div style="float:left">※ 설악워터피아 35%할인권 5인제공 </div>-->
+							</p>
+							<div class="clr row">
+								<p>
+									</p><div class="clr"></div>
+									<span class="person" style="float: none;">기준4인/최대7인</span>
+								<p></p>
+								<div class="price">
+									<del>410,000원</del>								<span class="font_b_black20">109,000원</span>
+								</div>
+							</div>
+						</div>
+									<input type="hidden" name="515465_room_pnosub" id="515465_room_pnosub" value="517">
+				</label>
+			</div>						
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="border:0">
+			<div class="room_info_box 515465_room_info" style="display:none"></div>
+		</td>
+	</tr>
+	<style type="text/css">
+		.radio_box .font_b_black20{font-size:1.350em;color:red}
+	</style>
+	<tr>
+		<td colspan="2" height="60">
+			<div class="radio_box">
+				<input type="radio" id="35735_room" name="sang" class="chk" value="35735"> 
+				<!-- <input type="hidden" name="35735_room_hiddeninfo" id="35735_room_hiddeninfo" value="eyJpZCI6IjM1NzM1IiwidmFsdWUiOiIzNTczNSIsImJhY2tncm91bmQiOiIiLCJvbmNsaWNrIjoiIiwiZGlzYWJsZWQiOiIiLCJyb29tX25hbWUiOiJbMlx1Yzc3OFx1YmIzNFx1YjhjY1x1Yzg3MFx1YzJkZF1cdWI5YWNcdWIxNzhcdWJjYTBcdWM3NzRcdWMxNTggXHVjNjI0XHVjMTU4XHViZGYwIFx1Y2Y1OFx1YjNjNCIsImVuZF9zdHIiOiIiLCJyX25vIjoiMzU3MzUiLCJybWluX251bSI6IjQiLCJybWF4X251bSI6IjciLCJ3X3ByaWNlIjoxMzkwMDAsIm5fcHJpY2UiOiI0MTAwMDAiLCJkaXNjb3VudCI6bnVsbCwiYXBwX3ByaWNlIjoxMzcwMDAsImNsYV9hZGQiOiIiLCJwX25vIjoiNTE3In0="/> -->
+				<label for="35735_room">
+						<div class="room_info_title">
+							<p class="font_black20" id="35735_rname">
+							
+							<!--- 패키지 말머리 추가 --->
+													
+							[2인무료조식]리노베이션 오션뷰 콘도 						<!--<br /><div style="float:left">※ 설악워터피아 35%할인권 5인제공 </div>-->
+							</p>
+							<div class="clr row">
+								<p>
+									</p><div class="clr"></div>
+									<span class="person" style="float: none;">기준4인/최대7인</span>
+								<p></p>
+								<div class="price">
+									<del>410,000원</del>								<span class="font_b_black20">139,000원</span>
+								</div>
+							</div>
+						</div>
+									<input type="hidden" name="35735_room_pnosub" id="35735_room_pnosub" value="517">
+				</label>
+			</div>						
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="border:0">
+			<div class="room_info_box 35735_room_info" style="display:none"></div>
+		</td>
+	</tr>
+	<style type="text/css">
+		.radio_box .font_b_black20{font-size:1.350em;color:red}
+	</style>
+	<tr>
+		<td colspan="2" height="60">
+			<div class="radio_box">
+				<input type="radio" id="35734_room" name="sang" class="chk" value="35734"> 
+				<!-- <input type="hidden" name="35734_room_hiddeninfo" id="35734_room_hiddeninfo" value="eyJpZCI6IjM1NzM0IiwidmFsdWUiOiIzNTczNCIsImJhY2tncm91bmQiOiIiLCJvbmNsaWNrIjoiIiwiZGlzYWJsZWQiOiIiLCJyb29tX25hbWUiOiJbMlx1Yzc3OFx1YmIzNFx1YjhjY1x1Yzg3MFx1YzJkZF1cdWI5YWNcdWIxNzhcdWJjYTBcdWM3NzRcdWMxNTggXHVjNjI0XHVjMTU4XHViZGYwIFx1ZDYzOFx1ZDE1NCIsImVuZF9zdHIiOiIiLCJyX25vIjoiMzU3MzQiLCJybWluX251bSI6IjQiLCJybWF4X251bSI6IjciLCJ3X3ByaWNlIjoxMzkwMDAsIm5fcHJpY2UiOiIzOTAwMDAiLCJkaXNjb3VudCI6bnVsbCwiYXBwX3ByaWNlIjoxMzcwMDAsImNsYV9hZGQiOiIiLCJwX25vIjoiNTE3In0="/> -->
+				<label for="35734_room">
+						<div class="room_info_title">
+							<p class="font_black20" id="35734_rname">
+							
+							<!--- 패키지 말머리 추가 --->
+													
+							[2인무료조식]리노베이션 오션뷰 호텔 						<!--<br /><div style="float:left">※ 설악워터피아 35%할인권 5인제공 </div>-->
+							</p>
+							<div class="clr row">
+								<p>
+									</p><div class="clr"></div>
+									<span class="person" style="float: none;">기준4인/최대7인</span>
+								<p></p>
+								<div class="price">
+									<del>390,000원</del>								<span class="font_b_black20">139,000원</span>
+								</div>
+							</div>
+						</div>
+									<input type="hidden" name="35734_room_pnosub" id="35734_room_pnosub" value="517">
+				</label>
+			</div>						
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="border:0">
+			<div class="room_info_box 35734_room_info" style="display:none"></div>
+		</td>
+	</tr>
+	<style type="text/css">
+		.radio_box .font_b_black20{font-size:1.350em;color:red}
+	</style>
+	<tr>
+		<td colspan="2" height="60">
+			<div class="radio_box">
+				<input type="radio" id="292540_room" name="sang" class="chk" value="292540"> 
+				<!-- <input type="hidden" name="292540_room_hiddeninfo" id="292540_room_hiddeninfo" value="eyJpZCI6IjI5MjU0MCIsInZhbHVlIjoiMjkyNTQwIiwiYmFja2dyb3VuZCI6IiIsIm9uY2xpY2siOiIiLCJkaXNhYmxlZCI6IiIsInJvb21fbmFtZSI6IlsyXHVjNzc4XHViYjM0XHViOGNjXHVjODcwXHVjMmRkXVx1YjlhY1x1YjE3OFx1YmNhMFx1Yzc3NFx1YzE1OCBcdWM2MjRcdWMxNThcdWJkZjAgXHVjZjU4XHViM2M0XHVkMTRjXHViNzdjXHVjMmE0IiwiZW5kX3N0ciI6IiIsInJfbm8iOiIyOTI1NDAiLCJybWluX251bSI6IjQiLCJybWF4X251bSI6IjciLCJ3X3ByaWNlIjoxOTkwMDAsIm5fcHJpY2UiOiI0OTAwMDAiLCJkaXNjb3VudCI6bnVsbCwiYXBwX3ByaWNlIjoxOTcwMDAsImNsYV9hZGQiOiIiLCJwX25vIjoiNTE3In0="/> -->
+				<label for="292540_room">
+						<div class="room_info_title">
+							<p class="font_black20" id="292540_rname">
+							
+							<!--- 패키지 말머리 추가 --->
+													
+							[2인무료조식]리노베이션 오션뷰 콘도테라스 						<!--<br /><div style="float:left">※ 설악워터피아 35%할인권 5인제공 </div>-->
+							</p>
+							<div class="clr row">
+								<p>
+									</p><div class="clr"></div>
+									<span class="person" style="float: none;">기준4인/최대7인</span>
+								<p></p>
+								<div class="price">
+									<del>490,000원</del>								<span class="font_b_black20">199,000원</span>
+								</div>
+							</div>
+						</div>
+									<input type="hidden" name="292540_room_pnosub" id="292540_room_pnosub" value="517">
+				</label>
+			</div>						
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="border:0">
+			<div class="room_info_box 292540_room_info" style="display:none"></div>
+		</td>
+	</tr>
+	
+	<tr class="pack_sub_none" onclick="javascript:package_view('');" style="display:none">
+		<td colspan="2" height="60" style="text-align:center;background-color:#f5f5f5;border:1px solid black">
+			<b>객실단품</b>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="border:0">
+			<div class="room_info_box" style="display:none"></div>
+		</td>
+	</tr>
+	<tr class="pack_sub_302226" onclick="javascript:package_view('302226');">
+		<td colspan="2" height="60" style="text-align:center;background-color:#f5f5f5;border:1px solid black">
+			<b>한화설악 워터피아 패키지</b>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="border:0">
+			<div class="room_info_box" style="display:none"></div>
+		</td>
+	</tr>
+	<tr class="pack_sub_302310" onclick="javascript:package_view('302310');">
+		<td colspan="2" height="60" style="text-align:center;background-color:#f5f5f5;border:1px solid black">
+			<b>속초 액션 패키지</b>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="border:0">
+			<div class="room_info_box" style="display:none"></div>
+		</td>
+	</tr>
+	<tr class="pack_on pack_sub_35077" onclick="javascript:package_view('35077');">
+		<td colspan="2" height="60" style="text-align:center;background-color:#f5f5f5;border:1px solid black">
+			<b>델피노설악 아쿠아월드 패키지</b>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="border:0">
+			<div class="room_info_box" style="display:none"></div>
+		</td>
+	</tr>
+	<tr class="pack_on pack_sub_332551" onclick="javascript:package_view('332551');">
+		<td colspan="2" height="60" style="text-align:center;background-color:#f5f5f5;border:1px solid black">
+			<b>척산온천 패키지</b>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="border:0">
+			<div class="room_info_box" style="display:none"></div>
+		</td>
+	</tr>
+	<tr class="pack_on pack_sub_35080" onclick="javascript:package_view('35080');">
+		<td colspan="2" height="60" style="text-align:center;background-color:#f5f5f5;border:1px solid black">
+			<b>양양쏠비치 아쿠아월드 패키지</b>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="border:0">
+			<div class="room_info_box" style="display:none"></div>
+		</td>
+	</tr>
+	<tr class="pack_on pack_sub_waterpark" onclick="javascript:package_view('waterpark');">
+		<td colspan="2" height="60" style="text-align:center;background-color:#f5f5f5;border:1px solid black">
+			<b>롯데리조트 워터파크 패키지</b>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="border:0">
+			<div class="room_info_box" style="display:none"></div>
+		</td>
+	</tr>
+	<style type="text/css">
+		.pack_on{display:none}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function (){
+			var val = $("input[name='pack_gubun']").val();
+			if(val == "") {
+				var val = "none";
+			}
+			$(".pack_sub_"+val).attr("style","display:none");
+		})
+	</script></tbody>
+	</table>
+	</form>
+	
+	<script type="text/javascript">$(document).ready(function (){$(".pack_sub_302226").removeClass('pack_on');$(".pack_sub_none").removeClass('pack_on');$(".pack_tab_302226").show();$(".pack_sub_302310").removeClass('pack_on');$(".pack_sub_none").removeClass('pack_on');$(".pack_tab_302310").show();$(".pack_tab_waterpark").hide();$(".pack_sub_none").removeClass('pack_on');$(".pack_tab_waterpark").addClass('pack_on');$(".pack_tab_35080").hide();$(".pack_sub_none").removeClass('pack_on');$(".pack_tab_35080").addClass('pack_on');$(".pack_tab_332551").hide();$(".pack_sub_none").removeClass('pack_on');$(".pack_tab_332551").addClass('pack_on');$(".pack_tab_35077").hide();$(".pack_sub_none").removeClass('pack_on');$(".pack_tab_35077").addClass('pack_on');});</script>
+	<script text="text/javascript">
+	$(function() {
+		$("input[name='sang']").click(function() {
+			
+			var id = $(this).attr("id");
+			var id_str = id+"_info";
+			var id_arr = id+"arrow";
+					
+			
+			$(".room_info_box").html("");
+			if($("#res_type2").val() == "pinspot") {
+				$(".hidden_info").attr("disabled", true);
+			}
+			
+			if($("#"+id).hasClass("man") == true) {
+				alert("예약마감된 객실입니다.");
+				return;
+			} else {
+				if($("."+id_str).hasClass("r_on2") == true) {
+					
+					$("."+id_str).html("");
+					$("."+id_str).removeClass("r_on2");
+					$("."+id_str).stop().slideUp('500');
+					$("."+id_arr).attr("src", "base_mimg/btn_arrow_bottom.jpg");
+				
+				} else if($("."+id_str).hasClass("r_on2") == false) {
+					
+					$(".r_on2").stop().slideUp('500');
+					$(".r_on2").removeClass("r_on2");
+	
+					if($("#res_type2").val() == "pinspot") {
+	
+						$("#sang_"+id+"_hidden").attr("disabled", false);
+					}
+						
+					$(".bbs_arrow").attr("src", "base_mimg/btn_arrow_bottom.jpg");
+					$("."+id_str).addClass("r_on2");
+	
+					var string1 = $("#rform").serialize();
+					var string2 = $("#prev_form").serialize();
+	
+													
+										app_search_confirm('rstep');button_count('', 'simple');
+																}
+			}
+		});
+	
+		$(".app_gobt").click(function(e) {
+			e.preventDefault();
+					callApp.exec(navigator.userAgent, 'http://app.go.co.kr/home/view/?p_no=HE93&back_move=Y');
+				});
+	
+		$(".app_gobt_main").click(function(e) {
+			e.preventDefault();
+			callApp.exec(navigator.userAgent, '');
+		});
+	});
+	
+	
+	$("#infom_box").fadeIn();
+	
+	// 앱 설치 유도 레이어
+	function app_search_confirm(target) {
+		go_price_calc();
+	
+	// 2017-05-22
+			$("#choice_sang").val($("input[name='sang']:checked").val());
+	
+		switch(target) {
+			case "login":
+				var script_target = "javascript:booking.prev_nlogin2('', '');";
+				break;
+			case "rstep":
+				var script_target = "javascript:booking.rstep1();";
+				break;
+			case "final":
+				var script_target = "javascript:booking.final_chk('', '');";
+				break;
+		}
+		
+		//utils.on("#popup_btn2");
+	
+		//utils.on("#pop_pay_ag");
+	
+				$.ajax({
+				url : "/reservation/state_m.php",
+				data: "mode=popup_cont&"+$("#rsch_form").serialize(),
+				type: "post",
+				success: function(e) {
+					$("#pop_cont").html(e);
+					//utils.on('#pop_pay_ag');
+					//$("#pop_pay_ag").css({"z-index":"200", "top":"0px"});
+					paypopon("#pop_pay_ag");
+					$(".vid-wrap").css({"height":"90px"});
+				}
+			});
+		}
+	function paypopon(obj) {
+		var a = ($(window).height() - $(obj).height()) / 2;
+		var b = ($(window).width() - $(obj).width()) / 2;
+		$(window).scrollTop(0);
+	
+		var arrPageSizes = ___getPageSize();
+		$("body").append("<div id=\"overlay\"></div>");
+		$("#overlay").css({"background-color":"#000", "opacity":"0.7", "width":arrPageSizes[0], "height":arrPageSizes[1]});
+		$(obj).css({"top": "72px", "left": b, "z-index": "200", "position":"fixed" }).show();
+	
+	}
+	function go_price_calc() {
+	
+	
+		if($(".select_box").hasClass("pkg") == true) {
+			var per = 0;
+			$("select[name^='person']").each(function(i) {
+				var id =$("select[name^='person']").eq(i).attr("id");
+	
+				per += parseInt($("#"+id+"").val());		
+	
+			});
+	
+			if(parseInt(per) < 1) {
+				alert("총 한장이상 구매해야합니다.");
+				$("select[name^='person']").eq(0).val(1);
+				return;
+			}
+	
+			//$("#person").val(parseInt(per));
+		}
+	
+		var string = $("#rform").serialize();
+		$.ajax({
+			url : "/reservation/state_m.php",
+			data: "mode=go_priceinfo&"+string,
+			type : "post",
+			success: function(e) {
+				
+				//$("#final_price_info").html(e);
+				$("#rsch_form").append(e);
+				go_cookie();
+			}
+		});
+	}
+	
+	</script></td>
+	</tr>
+	</tbody>
+	</table>
+	
+	
+	
+	<script type="text/javascript">
+	$(function() {
+		booking.find_room();
+		$("#addbox_bt").click(function(e){
+			e.preventDefault();
+			
+			if($(".hseldate_calender").hasClass("c_on")) {
+				booking.sch_calender($("input[name='hseldate']").val(), 'hseldate', 'close');
+				booking.sch_calender($("input[name='nseldate']").val(), 'nseldate', 'close');
+			}
+			$("#addbox").toggle();
+		});
+	
+		$("#p1").text($("#adult1").val());
+		$("#p2").text($("#child1").val());
+		
+	
+	});
+	
+	function addbox_select2() {
+		var str = "인원 "+$("#adult1").val()+"인";
+		$("#addbox_text").text(str);
+	}
+	</script>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<!---  예약하기 전 동의 팝업, 날짜 최종확인용 --->
+	<div id="pay_bt">
+		<div id="pop_pay_ag" style="display:none;hegiht:300px;overflow: auto;z-index:200">
+			<div id="pay_bt2">
+			<div class="closew">
+			<!--	<span class="close"><a href="javascript:utils.out('#pop_pay_ag');"><img width="30" alt="닫기" src="http://img.ocean2you.co.kr/go/mobile/menu_close.jpg"></a></span> -->
+			</div>
+			<div class="txt" id="pop_cont">
+				<p class="txt1"><!---님 --->체크인 시간은<br><span class="pop_paya_co">8월 27일 (토) 14:00</span>입니다. </p>
+				<p class="txt2">
+					<span class="txt_icon">-</span><span class="txtts"> 선택하신 상품의 취소, 환불규정은 꼼꼼히 확인하셨나요?<br><br></span>
+					<span class="txt_icon">-</span><span class="txtts"> 환불 불가 상품은, 규정과 상관없이 취소, 변경, 환불이 절대 불가합니다.<br><br></span>
+					<span class="txt_icon">-</span><span class="txtts"> 미성년자는 보호자 동반시 투숙이 가능합니다.</span></p>
+			</div>
+			<div class="btn"><span class="bt"><a href="#">동의하고 결제하기</a></span></div>
+			</div>
+			<!-- 추가 -->
+				</div>
+	</div>
+	
+	
+	
+	
+	<!--- 예약관련 전체 스크립트 --->
+	<script type="text/javascript">
+	/* 상세페이지 리뉴얼 */
+	var booking_new = {
+		//객실불러오는 함수
+		find_room_mobile: function() {
+	
+			/* 객실리스트 노출 시 검정색 배경 제거 20160919 */
+			$("#overlay").remove();
+			$("#top_box").css("z-index", "9999");
+	
+			//$(".product_info_w").html("<div id=\"loading_div\" style=\"text-align:center;width:100%;margin-bottom:50px;\"><p style=\"font-size:15px; line-height:3; color:#807f7f\"><span style=\"color:#ff610a\">실시간 요금 및 객실</span>을 불러오는 중입니다...</p><img src=\"http://img."+base_url+"/mobile/icon_loading.gif\" alt=\"loading\" width=\"20%\"/><br/><br/><br/></div>");
+			$(".product_info_w").html("<div id=\"loading_div\" style=\"text-align:center;width:100%;margin-bottom:50px;margin-top:10px;\"><img src=\"http://img."+base_url+"/mobile/icon_loading.gif\" alt=\"loading\" width=\"30%\"/><br/><br/><br/></div>");
+			$.ajax({
+				url : "/reservation/roomlist.php",
+				type : "post",
+				data : $("#rsch_form").serialize(),
+				success: function(e) {
+					$(".product_info_w").html(e);
+					
+					/* 객실리스트 노출 시 검정색 배경 제거 20160919 */
+					$("#overlay").remove();
+					$("#top_box").css("z-index", "9999");
+					
+					if($(".room_li").length == "0") {										
+						//가능한 객실이 없을 경우
+						if($("#chk_single").val() == "Y") {
+							$(".product_info_w").html("<p id=\"no_room\" style=\"margin-top:15px;font-weight:bold;text-align:center;padding-top:15px;\">예약 가능한 상품이 없습니다.</p>");
+						} else {
+							$(".product_info_w").html("<p id=\"no_room\" style=\"margin-top:15px;font-weight:bold;text-align:center;padding-top:15px;\">예약 가능한 객실이 없습니다.</p>");
+						}
+						$("#room_num").text("");
+						//$(".rlist_btn").hide();
+						/*
+						$("#rlist_btn_txt").text("판매완료");
+						$("#rlist_btn_txt").css({"background":"#cccccc"});
+						$(".rlist_choice").addClass("no_room");					
+						*/
+						
+						if($(".product_info_w").hasClass("searching") == true) {
+							setTimeout(function() {
+								$("#rlist_close").click();
+								booking_new.new_cal();
+							}, 500);
+						}
+	
+					} else {
+	
+	
+						var rent_chk = $("#rent_filter").val();
+						if(rent_chk != "" && $("#rent_chk").val() == "Y") {
+							$(".room_li").click(function() {
+								if($("input[name='sang']:checked").val() == "" || typeof $("input[name='sang']:checked").val() == "undefined") {
+									return;
+								} else {
+									$("#info_product_btn_w2").html("<div class=\"info_product_btn\" id=\"rlist_btn_txt\" onclick=\"rent_filter('"+rent_chk+"')\">객실 선택하기</div>");	
+								}
+							});
+	
+							if(rent_chk == "1") {
+								var lentxt = "숙박";							
+								$(".room_num").removeClass("on");
+								$(".txt_or").removeClass("on");
+								$(".product_add_discount").removeClass("on");
+								$(".add_sale_icon2").removeClass("on");
+								$(".o_day_s").removeClass("on");
+	
+							} else { 
+								var lentxt = "대실";
+								$(".room_num").addClass("on");
+								$(".txt_or").addClass("on");
+								$(".product_add_discount").addClass("on");
+								$(".add_sale_icon2").addClass("on");
+								$(".o_day_s").addClass("on");
+							}
+							$("#room_num").text("("+$(".room_li").length+"개 "+lentxt+"상품"+")");
+						} else {
+							$("#room_num").text("("+$(".room_li").length+"개 상품"+")");
+						}
+	
+						$(".rlist_choice").removeClass("no_room");
+						$("#rlist_btn_txt").text($("#button_text").val());
+						$("#rlist_btn_txt").css({"background":"#f95c24"});
+	
+	
+					}
+	
+					/*
+					$("#rlist_final > ul > li").each(function(i) {
+						var chk_id = $("#rlist_final > ul > li").eq(i).attr("id");
+						chk_id_sp = chk_id.split("_");
+						$("#rlist_final .info_box").eq(i).before("<input type=\"radio\" name=\"sang\" class=\"chk\" value=\""+$("#"+chk_id_sp[0]+"_hidden").val()+"\" id=\""+chk_id_sp[0]+"\" />");
+						$("#rlist_final .info_box").eq(i).wrap("<label for=\""+chk_id_sp[0]+"\">");
+					});
+					*/
+					//$(".rlist_choice").css({"bottom":"-"+$(".rlist_choice").height()+"px"});
+					
+					$("#wrapper").bind("touchmove", function(e) { e.preventDefault(); });
+					myScroll3 = new IScroll('#test', { mouseWheel: false, click: true, bounce:false, preventDefault : false, tap:true});
+	
+					$("#rlist_final ul li").on('click, tap', function() {
+						var chk_id = $(this).attr("id");
+						var str_ex = chk_id.split("_li");
+						
+						// 썸네일 이미지 객실 이미지로 변경 -> 해당 객실 사진으로 이동만, 만약 해당 객실사진이 없을경우 슬라이드에 붙여서 거기로 이동
+						// 공통 변수
+						var room_id = $("#"+str_ex[0]+"_hidden").val();
+						var p_no = $("#find_pno").val();
+	
+						// 익스피디아를 제외한 제휴 업체 이미지 처리하기 위한 변수
+						var total_img = $("#total_cnt").val();
+	
+						// 익스피디아 이미지 처리하기 위해 필요한 변수
+						var jehu = $("#jehu").val();
+						var ex = str_ex[0].split("room");
+						var hotelid = $("#exhotel_"+ex[1]).val();
+						var room_name = $("#room_name"+ex[1]).val();
+						var rate_code = $("#"+str_ex[0]).val();
+						var rate = rate_code.split("||");
+	
+						// view_total.php 의 img_arr 배열 안에 있는 room_id 가져오기
+						var img_array = new Array();
+						for(var j=0; j<total_img; j++){
+							img_array.push($("#img_id_"+j).val());
+						}
+	
+						$.ajax({
+							url : "/reservation/state_m.php",
+							type : "post",
+							data : "mode=room_imgch&room_id="+room_id+"&p_no="+p_no+"&hotelid="+hotelid+"&rate_code="+rate[1]+"&room_name="+room_name+"&jehu="+jehu+"&img_array="+img_array,
+							success: function(e) {
+								if(e != "no"){
+									var swiper2 = new Swiper('.swiper-container', {
+										scrollbar: '.swiper-scrollbar',	// 스크롤
+										scrollbarHide: false,	// 스크롤 안할때도 스크롤바 숨기지 않음
+										uniqueNavElements: true,
+										observer: true,
+										loop:true,
+										nextButton: '.swiper-button-next',
+										prevButton: '.swiper-button-prev',
+	
+										autoplayDisableOnInteraction: false,
+										paginationBulletRender: function (index, className) { 
+											return '<span class="' + className + '"></span>'; 
+										}
+									});					
+	
+									if(jehu == "expedia" || jehu == "expedia_a"){
+										swiper2.appendSlide(e);	// 끝에 추가됨, 처음 슬라이드로 이동됨
+										swiper2.slidePrev(true, 300); // 처음의 전인 마지막으로 추가된 이미지로 이동
+										swiper2.update();
+									} else{
+										swiper2.slideTo(e, 300, true); // 해당 객실 이미지로 슬라이드 이동
+									}
+	
+								} 
+							}
+						}); 
+	
+					
+						if($(this).hasClass("no_avail") == true) {
+							alert("예약마감된 객실입니다.");
+						} else {
+							$("#"+str_ex[0]).prop("checked", true);
+						}
+					});
+				}, 		
+				beforeSend: function() {
+					/* 객실리스트 노출 시 검정색 배경 제거 20160919 */
+					$("#overlay").remove();
+					$("#top_box").css("z-index", "9999");
+	
+					//$(".product_info_w").html("<div id=\"loading_div\" style=\"text-align:center;width:100%;margin-bottom:50px;\"><p style=\"font-size:15px; line-height:3; color:#807f7f\"><span style=\"color:#ff610a\">실시간 요금 및 객실</span>을 불러오는 중입니다...</p><img src=\"http://img."+base_url+"/mobile/icon_loading.gif\" alt=\"loading\" width=\"20%\"/><br/><br/><br/></div>");
+					$(".product_info_w").html("<div id=\"loading_div\" style=\"text-align:center;width:100%;margin-bottom:50px;margin-top:10px;\"><img src=\"http://img."+base_url+"/mobile/icon_loading.gif\" alt=\"loading\" width=\"30%\"/><br/><br/><br/></div>");
+	
+				}
+			});
+		},
+		
+		//예약하기 누른 후 동의하고 결제하기 레이어창
+		prev_login: function(add_val, login_mode) {
+			var chk_id = $("input[name='sang']:checked").attr("id");
+	
+	
+			$("#choice_sang").val($("input[name='sang']:checked").val());
+			$("#choice_sanginfo").val($("#"+chk_id+"_hiddeninfo").val());
+	
+			$("#rsch_form").submit();
+	
+			$("#overlay").bind("touchmove", function(e) { e.preventDefault(); });
+			myScroll3 = new IScroll('#pop_cont', { mouseWheel: true, click: true, bounce:false, preventDefault : false, tap:true});
+		},
+		
+		//조건수정
+		modify: function(fgubun, site) {
+			if(site == "expedia" || site == "expedia_a") {
+				$("#calender_number_w").toggle();
+			} else {
+				booking_new.new_cal();
+			}
+		},
+		
+		//신규달력 오픈
+		new_cal: function() {
+			if($("#calendar_w").hasClass("on") == true) {
+				$("#overlay").unbind("touchmove");
+	
+				/* 추가했던 검정색 배경 제거*/
+				$("#overlay").remove();
+				$("#top_box").css("z-index", "9999");
+	
+				$("#info_product_btn_w").show();
+				$("#calendar_w_btn_w").hide();
+	
+				$("#calendar_w").removeClass("on");
+				$("#calendar_w").css({"bottom":"-1000px"});
+	
+	
+			} else {
+				var arrPageSizes = ___getPageSize();
+				$("#calendar_w").css({"bottom":"60px"});
+				
+				/*검정색 배경추가*/
+				$("body").append("<div id=\"overlay\"></div>");
+				$("#overlay").css({"background-color":"#000", "opacity":"0.7", "width":arrPageSizes[0], "height":arrPageSizes[1]});
+				$("#top_box").css("z-index", "5");
+	
+				if($("#calendar_w").html() != "") {
+					$("#calendar_w").addClass("on");
+					$("#calendar_w_btn_w").show();
+				}
+	
+				$.ajax({
+										//url : "/reservation/cal_171006.php",
+						url : "/reservation/cal.php",
+									type : "post",
+					data: $("#rsch_form").serialize(),
+					success: function(r) {				
+						$("#calendar_w").addClass("on");
+						$("#calendar_w_btn_w").show();
+	
+						$("#calendar_w").html(r);
+						$("#info_product_btn_w").hide();
+						
+						
+						
+						if($("#chk_single").val() == "Y") {
+							$("#calbtn").text("이용일 선택 완료");
+						} else {
+							
+							if($("#night").val() == 1 && $("#rent_chk").val() == "Y") {
+								$("#calendar_w_btn_w").html("<p class=\"btn_wrap clr\"><a href=\"javascript:rent_date('2');\">대실예약</a><a href=\"javascript:rent_date('1');\">숙박예약</a></p>");
+							} else {
+								//$("#calbtn").text($("#night").val()+"박 선택 완료");
+							}
+						}
+	
+						$("#overlay").bind("touchmove", function(e) { e.preventDefault(); });
+						myScroll4 = new IScroll('#cal_subbox', { mouseWheel: false, click: true, bounce:false});
+					}
+				});
+			}
+		},
+		
+		//신규달력 선택
+		new_choice: function(date1, ts, single) {
+			//1. 체크인과 체크아웃 둘다 있는데 클릭 시 체크인만 선택체크 후 상단 텍스트 라인 체크아웃 날짜를 선택해주세요. 로 변경 
+			//버튼은 다시 선택완료 회색버튼으로 변경
+			//2. 체크인만 있을 경우에 클릭 시 체크아웃 클래스 추가 후 주황색 몇박 선택완료 버튼 으로 변경 
+			//체크인과 체크아웃 날짜 사이의 td들 주황색 클래스 처리
+			
+			//단품은 이용일 하나만 체크
+			if(single == "Y") {
+	
+				//기존에 이용일 체크 되있던 날짜 해제 
+				var chin_id		= $(".week_day_table").find(".Pkg-w").attr("id");
+				
+							
+				$("#"+chin_id).removeClass("Pkg-w");
+				$("#"+chin_id+" > a > .Pkg-txt").remove();
+	
+				//지금 누른 업체 이용일 표시
+				var chk_id = "date_"+date1;
+				$("#"+chk_id).addClass("Pkg-w");
+				$("#"+chk_id+" > a").prepend("<span class=\"Pkg-txt\">이용일</span>");
+				$("#"+chk_id+" > a").find(".today_ba").removeClass("today_ba");
+				
+				/*두개 날짜가 모두 선택됐으므로 버튼 변경 및 상단 변경*/ 
+				/* 상단 타이틀 라인 수정*/
+				var chin_id		= $(".week_day_table").find(".Pkg-w").attr("id");
+				chin_id = chin_id.replace("date_", "");
+	
+				var week = new Array('일', '월', '화', '수', '목', '금', '토');
+				var yoil_chin = new Date(chin_id).getDay();
+	
+				chin_str = chin_id.replace(/-/gi, ".");
+				ch_str = chin_str+" ("+week[yoil_chin]+")";
+				
+				$("#title_txt").text(ch_str);
+	
+				$("#calbtn").text("이용일 선택 완료");
+				$("#calbtn").removeClass("calendar_product_btn_n").addClass("calendar_product_btn");
+				
+	
+	
+			} else {
+				var chin_len	= $(".week_day_table").find(".Check-in").length;		//체크인 날짜 여부 체크
+				var chout_len	= $(".week_day_table").find(".Check-out").length;		//체크아웃 날짜 여부 체크 
+				
+				//체크인와 체크아웃이 둘다 선택되어 있는 경우
+				if(chin_len == 1 && chout_len == 1) {
+					/*기존선택된 클래스들 초기화*/
+					var chin_id		= $(".week_day_table").find(".Check-in").attr("id");		//체크인 날짜 아이디
+					var chout_id	= $(".week_day_table").find(".Check-out").attr("id");		//체크아웃 날짜 아이디
+	
+					$("#"+chin_id).removeClass("Check-in");
+					$("#"+chout_id).removeClass("Check-out");			
+					$("#"+chin_id+" > a > .Check-in-txt").remove();
+					$("#"+chout_id+" > a > .Check-in-txt").remove();			
+					$(".week_day_table").find(".Check-ing").removeClass("Check-ing");
+	
+					/* 지금 누른 업체 체크인 표시*/
+					var chk_id = "date_"+date1;
+					$("#"+chk_id).addClass("Check-in");
+					$("#"+chk_id+" > a").prepend("<span class=\"Check-in-txt\">체크인</span>");
+					$("#"+chk_id+" > a").find(".today_ba").removeClass("today_ba");
+					
+					//하단 버튼 텍스트 변경 및 클래스명 변경
+					/*
+					if($("#night").val() == 1 && $("#rent_chk").val() == "Y") {
+						$("#calendar_w_btn_w").html("<div class=\"calendar_product_btn\" id=\"calbtn\" onclick=\"booking_new.date_apply();\">날짜선택</div>");
+					} else {
+						$("#calbtn").text("날짜선택");					
+					}
+					$("#calbtn").removeClass("calendar_product_btn").addClass("calendar_product_btn_n");
+					*/
+	
+					/* 상단 타이틀 라인 수정*/
+					$("#title_txt").text("체크아웃 날짜를 선택해주세요.");
+					
+					var today = $(".week_day_table").find(".today").parent().attr("id");
+					if($("#"+today+" > a > span").not(".Check-in-txt").hasClass(".today_ba") == false && today != "date_"+date1) {
+						$("#"+today+" > a > span").not(".Check-in-txt").addClass("today_ba");
+					}
+	
+	
+				} else if(chin_len == 1 && chout_len == 0) {
+				//체크인 선택되어 있고 체크아웃 없는 경우
+				//체크인만 누른 상태에서 이전날짜를 눌렀으면 체크인이 추가되어야 하고 아니면 체크아웃 처리
+					
+					var chin_id		= $(".week_day_table").find(".Check-in").attr("id");
+					chin_id	 = chin_id.replace("date_", "");
+					chin_id  = chin_id.replace(/-/gi, "");
+					chin_id	= parseInt(chin_id);
+	
+					var chk_id = date1.replace(/-/gi, "");
+					chk_id = parseInt(chk_id);
+					
+					if(chk_id < chin_id) {
+						//기존에 체크인 되있던 날짜 해제 
+						var chin_id		= $(".week_day_table").find(".Check-in").attr("id");
+						$("#"+chin_id).removeClass("Check-in");
+						$("#"+chin_id+" > a > .Check-in-txt").remove();
+	
+						//지금 누른 업체 체크인 표시
+						var chk_id = "date_"+date1;
+						$("#"+chk_id).addClass("Check-in");
+						$("#"+chk_id+" > a").prepend("<span class=\"Check-in-txt\">체크인</span>");
+						$("#"+chk_id+" > a").find(".today_ba").removeClass("today_ba");
+	
+						
+					} else if(chk_id > chin_id) {
+						
+							var basic_night = "";	
+							switch($("#jehu").val()) {
+								case "hottel":
+								case "pinspot":
+									basic_night = 1;
+									break;
+								
+								case "woori":
+								case "gpension":
+									basic_night = 6;
+									break;
+								
+								default:
+																	basic_night = 99;
+																	break;
+								
+	
+							}
+	
+							/* 숙박일수를 각 제휴사별로 제한하는 부분*/
+							var chin_id		= $(".week_day_table").find(".Check-in").attr("id");			
+							chin_id_chk = chin_id.replace("date_", "");
+							chout_id_chk = date1;
+	
+							/* 날짜차이로 숙박일수 알아내기 */
+							var diff_chk = new Date(chout_id_chk) - new Date(chin_id_chk);
+							var currday_chk = 24*60*60*1000;
+							diff_chk = parseInt(diff_chk/currday_chk);
+							
+							var test = new Date(chin_id_chk);
+							test.setDate(test.getDate()+1);
+	
+							
+							yy = test.getFullYear();
+							mm = test.getMonth() + 1; 
+							mm = (mm < 10) ? '0' + mm : mm;
+	
+							dd = test.getDate(); 
+							dd = (dd < 10) ? '0' + dd : dd;
+							
+							var final_day = "date_"+yy+"-"+mm+"-"+dd;
+	
+							if(diff_chk > basic_night) {
+								alert("해당상품은 "+basic_night+"박이상 예약불가능합니다.");
+	
+								var chk_id = final_day;
+								$("#"+chk_id).addClass("Check-out");
+								$("#"+chk_id+" > a").prepend("<span class=\"Check-in-txt\">체크아웃</span>");
+								$("#"+chk_id+" > a").find(".today_ba").removeClass("today_ba");
+								
+								/*두개 날짜가 모두 선택됐으므로 버튼 변경 및 상단 변경*/ 
+								/* 상단 타이틀 라인 수정*/
+								chk_id = chk_id.replace("date_", "");
+	
+								var week = new Array('일', '월', '화', '수', '목', '금', '토');
+								var yoil_chin = new Date(chin_id_chk).getDay();
+								var yoil_chout = new Date(chk_id).getDay();
+								
+								chin_str = chin_id_chk.replace(/-/gi, ".");
+								chout_str = chk_id.replace(/-/gi, ".");
+	
+								/* 날짜차이로 숙박일수 알아내기 */
+								var diff = new Date(chk_id) - new Date(chin_id_chk);
+								var currday = 24*60*60*1000;
+								diff = parseInt(diff/currday);
+	
+								ch_str = chin_str+" ("+week[yoil_chin]+")~"+chout_str+" ("+week[yoil_chout]+") / "+diff+"박";
+								$("#title_txt").text(ch_str);
+	
+								/*
+								if($("#night").val() == 1 && $("#rent_chk").val() == "Y") {
+									$("#calendar_w_btn_w").html("<p class=\"btn_wrap clr\"><a href=\"javascript:rent_date('2');\">대실예약</a><a href=\"javascript:rent_date('1');\">숙박예약</a></p>");
+								} else {
+									$("#calbtn").text(diff+"박 선택 완료");
+								}
+	
+								$("#calbtn").removeClass("calendar_product_btn_n").addClass("calendar_product_btn");
+								*/
+								return;
+							}
+							/* 숙박일수를 각 제휴사별로 제한하는 부분*/
+	
+	
+	
+	
+						//지금 누른 업체 체크아웃 표시
+						var chk_id = "date_"+date1;
+						$("#"+chk_id).addClass("Check-out");
+						$("#"+chk_id+" > a").prepend("<span class=\"Check-in-txt\">체크아웃</span>");
+						$("#"+chk_id+" > a").find(".today_ba").removeClass("today_ba");
+						
+						//체크인과 체크아웃 날짜 사이에 클래스 추가
+						var chin_id		= $(".week_day_table").find(".Check-in").attr("id");				
+						$("#"+chin_id).nextUntil(".Check-out").addClass("Check-ing");
+	
+						var chout_id	= $(".week_day_table").find(".Check-out").attr("id");
+						$("#"+chout_id).prevUntil(".Check-in").addClass("Check-ing");
+	
+						//체크인 날짜의 tr id
+						//체크인과 체크아웃 날짜 사이에 한주이상 들어가있으면 클래스 처리가 안되니 추가작업 
+						var chin_tr = $("#"+chin_id).parent().attr("id");
+						var chout_tr = $("#"+chout_id).parent().attr("id");
+						chin_tr		= parseInt(chin_tr.replace("month_", ""));
+						chout_tr	= parseInt(chout_tr.replace("month_", ""));
+						if((chout_tr - chin_tr) > 1) {
+							for(var j = chin_tr+1; j < chout_tr; j++) {
+								if(j < 10) {
+									$("#month_0"+j+" td").addClass("Check-ing");
+								} else {
+									$("#month_"+j+" td").addClass("Check-ing");
+								}
+							}
+						}
+	
+						/*두개 날짜가 모두 선택됐으므로 버튼 변경 및 상단 변경*/ 
+						/* 상단 타이틀 라인 수정*/
+						chin_id = chin_id.replace("date_", "");
+						chout_id = chout_id.replace("date_", "");
+	
+						var week = new Array('일', '월', '화', '수', '목', '금', '토');
+						var yoil_chin = new Date(chin_id).getDay();
+						var yoil_chout = new Date(chout_id).getDay();
+	
+						chin_str = chin_id.replace(/-/gi, ".");
+						chout_str = chout_id.replace(/-/gi, ".");
+	
+						/* 날짜차이로 숙박일수 알아내기 */
+						var diff = new Date(chout_id) - new Date(chin_id);
+						var currday = 24*60*60*1000;
+						diff = parseInt(diff/currday);
+	
+						ch_str = chin_str+" ("+week[yoil_chin]+")~"+chout_str+" ("+week[yoil_chout]+") / "+diff+"박";
+						$("#title_txt").text(ch_str);
+						/*
+						if($("#night").val() == 1 && $("#rent_chk").val() == "Y") {
+							$("#calendar_w_btn_w").html("<p class=\"btn_wrap clr\"><a href=\"javascript:rent_date('2');\">대실예약</a><a href=\"javascript:rent_date('1');\">숙박예약</a></p>");
+						} else {					
+							$("#calbtn").text(diff+"박 선택 완료");
+						}
+						$("#calbtn").removeClass("calendar_product_btn_n").addClass("calendar_product_btn");
+						*/
+					}
+				}
+			}
+		},
+		
+		date_apply: function() {		
+			var cla = $("#calbtn").attr("class");		
+	
+			if(cla == "calendar_product_btn" || ($("#night").val() == 1 && $("#rent_chk").val() == "Y" && $("#rent_filter").val() != "")) {			
+				/* 이용권 일 때*/
+				if($("#chk_single").val() == "Y" || $("#sale_single").val() == "Y") {
+					var chin_id		= $(".week_day_table").find(".Pkg-w").attr("id");		//이용일 날짜 아이디
+					chin_id		= chin_id.replace("date_", "");
+					
+					$("input[name='hseldate']").val(chin_id);				
+					$("input[name='nseldate']").val(chin_id);
+					
+					var week = new Array('일', '월', '화', '수', '목', '금', '토');
+					var yoil_chin = new Date(chin_id).getDay();
+					var yoil_chout = new Date(chout_id).getDay();
+	
+	
+					chin_str = chin_id.replace(/-/gi, ".");
+					//$("#date_choide").text(chin_str);
+	
+					$("#chdate_text").text(chin_str+" ("+week[yoil_chin]+")");
+	
+				} else {
+					var chin_id		= $(".week_day_table").find(".Check-in").attr("id");		//체크인 날짜 아이디
+					var chout_id	= $(".week_day_table").find(".Check-out").attr("id");		//체크아웃 날짜 아이디
+					
+					if(typeof chout_id == "undefined") {
+						alert("체크아웃 날짜를 선택하세요.");
+						return false;
+					} else {
+	
+						chin_id		= chin_id.replace("date_", "");
+						chout_id	= chout_id.replace("date_", "");
+	
+						$("input[name='hseldate']").val(chin_id);
+						$("input[name='nseldate']").val(chout_id);
+	
+						var week = new Array('일', '월', '화', '수', '목', '금', '토');
+						var yoil_chin = new Date(chin_id).getDay();
+						var yoil_chout = new Date(chout_id).getDay();
+	
+						chin_str = chin_id.replace(/-/gi, ".");
+						chout_str = chout_id.replace(/-/gi, ".");
+	
+						/* 날짜차이로 숙박일수 알아내기 */
+						var diff = new Date(chout_id) - new Date(chin_id);
+						var currday = 24*60*60*1000;
+						diff = parseInt(diff/currday);
+						
+						$("#night").val(diff);
+	
+						$("#prev_night").val(diff);
+	
+						//$("#date_choide").text(chin_str+"~"+chout_str);
+	
+						$("#chin_text").text(chin_str+" ("+week[yoil_chin]+")");
+						$("#chout_text").text(chout_str+" ("+week[yoil_chout]+")");
+	
+						// 체크인 날짜와 체크아웃 날짜 사이의 숙박일수 변경
+						$("#night_cnt").text(diff+"박");
+	
+						// 객실 리스트에 노출되는 숙박일수 날짜 설정
+						$("#night_roomc").text(diff+" 기준");	
+					}
+				}
+				
+				//booking_new.find_room_mobile();
+				booking_new.new_cal();
+	
+	
+				booking.find_room();
+	
+								var p_top = $("#calender_number_w").offset().top;
+					p_top = p_top -90;
+					$(window).scrollTop(p_top);
+	
+				//	booking_new.apply_info();
+				//$(".rlist_btn").click();
+			}
+	
+		},
+		
+		ex_choice: function() {
+			booking_new.apply_info();
+		},
+		
+		person_calc: function(gubun) {
+			
+			if(gubun == "up") {
+				
+				var max_val = $("#max_choice").val();
+				//선택할 때 최대인원 제한 
+				if(parseInt($("input[name=person]").val()) < parseInt(max_val)){
+					var su2 = parseInt($("input[name=person]").val())+1;
+					$("input[name=person]").val(su2);
+				
+				} else {
+					alert("최대 "+parseInt(max_val)+"명까지 선택가능합니다.");
+					$("input[name=person]").val(max_val);
+				}
+				
+			} else if(gubun == "down") {
+				if($("input[name=person]").val() > "1"){
+					var su2 = parseInt($("input[name=person]").val())-1;
+					$("input[name=person]").val(su2);
+				} else {
+					alert("최소이용인원은 1명입니다.");
+					$("input[name=person]").val("1");
+				}
+			}
+	
+			$("#person_num").text($("input[name=person]").val());
+			$("#adult").val($("input[name=person]").val());
+			booking.find_room();
+		},
+		
+		apply_info: function() {
+			$(".product_info_w").addClass("searching");
+	
+			var arrPageSizes = ___getPageSize();
+	
+			var img_he = $("#info_img_wrpa").height();
+			var product_he = 110;
+			var total_he = parseInt(product_he) + parseInt(img_he);
+			total_he = parseInt($(window).height()) - total_he;
+	
+			$(".info_product_list").css({"height": total_he+"px"});	// 객실리스트 노출되는 div 높이 수정
+			
+			booking_new.find_room_mobile();
+	
+	
+			/*검정색 배경추가 -> 제거 20160919*/
+	//		$("body").append("<div id=\"overlay\"></div>");
+	//		$("#overlay").css({"background-color":"#000", "opacity":"0.7", "width":arrPageSizes[0], "height":arrPageSizes[1]});
+	//		$("#top_box").css("z-index", "5");
+			
+			/* 객실리스트 부분 레이어 구분 위해 on 클래스를 addClass 를 사용하여 추가하고 show 함수로 노출 */
+			/* bottom 이 아래쪽으로 잡혀있으므로 버튼 높이 고려 60px로 css 수정 */
+			$(".rlist_choice").addClass("on");
+			
+			
+			$(".rlist_choice").show();
+			$(".rlist_choice").css({"bottom":"60px"});
+			
+			$("#rlist_btn_txt").text("예약하기");
+			$(".rlist_btn").css({"z-index":"99999"});
+			
+			/*
+			$(window).bind("touchmove", function(e) { e.preventDefault(); });
+			myScroll3 = new IScroll('#test', { mouseWheel: false, click: true, bounce:false, preventDefault : false, tap:true});
+			*/
+	
+			
+		}
+	}
+	
+	$(function() {
+	
+		// 이미지까지만 보이도록 높이 조정 20160919		
+		
+		
+		
+	
+		/*객실리스트 뿌려주는 함수*/
+		/*페이지 로딩과 동시에 디폴트 선택된 날짜로 객실 및 상품리스트 호출*/
+		/*all_common.js 파일에 신규로 추가*/
+		/*만약 이용가능한 상품이 하나도 없으면 버튼이 판매완료로 바뀌고 선택 못하도록 바뀜*/
+	
+		//booking_new.find_room_mobile();
+		
+		/* 하단 객실선택하기 버튼을 클릭 시 */
+		$(".rlist_btn").click(function(e) {
+			var arrPageSizes = ___getPageSize();
+			e.preventDefault();
+	
+			if($(".rlist_choice").hasClass("no_room") == true) {
+				
+				alert("해당 날짜에는 모든 상품이 판매완료되었습니다. 다른 날짜를 선택하세요.");
+				return;
+				
+			} else if($(".rlist_choice").hasClass("on") == true) {
+				
+				if($("input[name='sang']:checked").val() == "" || typeof $("input[name='sang']:checked").val() == "undefined") {
+					alert("예약하실 상품을 선택하세요.");
+					return;
+				} else {
+	
+					var chk_id = $("input[name='sang']:checked").attr("id");
+	
+					/*검정색 배경추가 20160919*/
+					$("body").append("<div id=\"overlay\"></div>");
+					$("#overlay").css({"background-color":"#000", "opacity":"0.7", "width":arrPageSizes[0], "height":arrPageSizes[1]});
+					$("#top_box").css("z-index", "5");
+	
+					$("#choice_sang").val($("input[name='sang']:checked").val());
+					$("#choice_sanginfo").val($("#"+chk_id+"_hiddeninfo").val());
+					$.ajax({
+						url : "/reservation/state_m.php",
+						data: "mode=popup_cont&"+$("#rsch_form").serialize(),
+						type: "post",
+						success: function(e) {
+							$("#pop_cont").html(e);
+	
+							utils.on('#pop_pay_ag');
+							/* 추가했던 검정색 배경 제거*/
+							$("#overlay").remove();
+	
+							/* 객실리스트를 다시 아래쪽으로 이동하여 안보이게 처리 */
+							/* 객실리스트가 내려갔으므로 추가했던 on 클래스 removeClass 써서 제거 */
+							$(".rlist_choice").css({"bottom":"-"+$(".rlist_choice").height()+"px"});
+							$(".rlist_choice").removeClass("on");
+							$("#rlist_btn_txt").text($("#button_text").val());
+							$(".rlist_btn").css({"z-index":"5"});
+	
+						}
+					});
+					
+				}
+	
+			} else {			
+	
+				booking_new.apply_info();
+			}
+	
+		});
+		
+		/* 객실리스트 닫기 버튼 클릭 시 */
+		$("#rlist_close").click(function(e) {
+			$("#wrapper").unbind("touchmove");
+			e.preventDefault();
+	
+			/* 추가했던 검정색 배경 제거*/
+			$("#overlay").remove();
+			$("#top_box").css("z-index", "9999");
+	
+			/* 객실리스트를 다시 아래쪽으로 이동하여 안보이게 처리 */
+			/* 객실리스트가 내려갔으므로 추가했던 on 클래스 removeClass 써서 제거 */
+			$(".rlist_choice").css({"bottom":"-"+$(".rlist_choice").height()+"px"});
+			$(".rlist_choice").removeClass("on");
+	
+			$("#rlist_btn_txt").text($("#button_text").val());
+	
+			var rent_chk = $("#rent_filter").val();
+			if(rent_chk != "" && $("#rent_chk").val() == "Y") {
+				$("#info_product_btn_w2").html("<p class=\"btn_wrap clr\"><a href=\"javascript:rent_filter('2');\">대실예약</a><a href=\"javascript:rent_filter('1');\">숙박예약</a></p>");	
+				$("#rent_filter").val('');
+			}
+	
+		});
+		
+		/*  동의하고 결제하기 */ 
+		/*****************************20161021 마감시간 이후 작업관련******************************/
+		$("#pay_bt2").click(function() {		
+			utils.out('#pop_pay_ag');
+			button_count('517', 'simple');
+	
+			var chksid = $("#choice_sang").val();
+			chksid = chksid.replace("||", "_");
+	
+			//var chp = $("#"+chksid+"_pkggu").val();
+			//chp = chp.split("_");
+	
+			var pno = "517";
+	
+	
+			if($("#jehu").val() == "" || $("#jehu").val() == "all") {
+				$.ajax({
+					url : "/reservation/state_m.php",
+					type : "post",
+					data : "mode=final_chk&pno="+pno+"&seldate="+$("#hseldate2").val()+"",
+					success: function(data) {
+						var res = data.split("||");
+						if(res[0] == "no") {
+							alert(res[1]);
+							location.href=res[2];
+							return;
+						} else {
+														$("#rsch_form").attr("action", "/reservation/?dd=WxszRixQP1cpEUZ2TnE=&p_no=HE93");
+							
+							booking_new.prev_login('', '1');
+						}
+					}
+				});
+			} else {
+								$("#rsch_form").attr("action", "/reservation/?dd=WxszRixQP1cpEUZ2TnE=&p_no=HE93");
+				
+	
+				// pay_step1 페이지로 넘기는 #rsch_form 폼에 없는 rform값만 넘기기
+				var jchk = $("#jehu").val();
+				if(jchk == "expedia" || jchk == "gpension" || jchk == "pinspot" || jchk == "monstay") {
+					var etc_string = $("#rform").serialize();
+					var etc_string2 = $("#rsch_form").serialize();
+	
+					var tmp_etc = etc_string.split("&");
+					var tmp_etc2 = etc_string2.split("&");
+	
+					for(var s=0; s<tmp_etc.length; s++) {
+					
+						var form_hidden = tmp_etc[s].split("=");
+						var n = form_hidden[0].indexOf("%5B%5D");
+						var n2 = tmp_etc2.indexOf(form_hidden[0]);
+	
+						if(form_hidden[1] != "") {
+							if(n == -1 && n2 == -1) {
+								if(jchk == "pinspot") {
+									var hidden_value = form_hidden[1].replace(/(<([^>]+)>)/gi, "");
+								} else {
+									var hidden_value = form_hidden[1];
+								}
+								$("#rsch_form").append("<input type='hidden' name='"+form_hidden[0]+"' value='"+hidden_value+"' />");
+							}
+						}
+					}
+				}
+		
+		
+				booking_new.prev_login('', '1');
+			}
+		});
+		/*****************************20161021 마감시간 이후 작업관련******************************/
+	
+		$("#app_gobt").click(function(e) {
+					button_count('517', 'apppay_and');
+			
+			callApp.exec(navigator.userAgent, 'http://app.go.co.kr');
+	
+			/*
+					location.href='https://goo.gl/sJQXdA';
+					*/
+		});
+	});
+	
+	
+	// 대실예약, 숙박예약 필터구분 20170208
+	function rent_filter(chk) {
+		var arrPageSizes = ___getPageSize();
+	
+		var prev_chk = $("#rent_filter").val();
+		if(prev_chk != "" && chk != prev_chk) {
+			$("#rlist_close").trigger("click");
+		}
+	
+		$("#rent_filter").val(chk);
+		if($(".rlist_choice").hasClass("no_room") == true) {
+			
+			alert("해당 날짜에는 모든 상품이 판매완료되었습니다. 다른 날짜를 선택하세요.");
+			return;
+			
+		} else if($(".rlist_choice").hasClass("on") == true) {
+			
+			if($("input[name='sang']:checked").val() == "" || typeof $("input[name='sang']:checked").val() == "undefined") {
+				alert("예약하실 상품을 선택하세요.");
+				return;
+			} else {
+				var chk_id = $("input[name='sang']:checked").attr("id");
+				/*검정색 배경추가 20160919*/
+				$("body").append("<div id=\"overlay\"></div>");
+				$("#overlay").css({"background-color":"#000", "opacity":"0.7", "width":arrPageSizes[0], "height":arrPageSizes[1]});
+				$("#top_box").css("z-index", "5");
+	
+				$("#choice_sang").val($("input[name='sang']:checked").val());
+				$("#choice_sanginfo").val($("#"+chk_id+"_hiddeninfo").val());
+				
+				$.ajax({
+					url : "/reservation/state_m.php",
+					data: "mode=popup_cont&"+$("#rsch_form").serialize(),
+					type: "post",
+					success: function(e) {
+						$("#pop_cont").html(e);
+	
+						utils.on('#pop_pay_ag');
+						/* 추가했던 검정색 배경 제거*/
+						$("#overlay").remove();
+	
+						/* 객실리스트를 다시 아래쪽으로 이동하여 안보이게 처리 */
+						/* 객실리스트가 내려갔으므로 추가했던 on 클래스 removeClass 써서 제거 */
+						$(".rlist_choice").css({"bottom":"-"+$(".rlist_choice").height()+"px"});
+						$(".rlist_choice").removeClass("on");
+						$("#rlist_btn_txt").text($("#button_text").val());
+						$(".rlist_btn2").css({"z-index":"5"});
+					}
+				});
+				
+			}
+	
+		} else {			
+			booking_new.apply_info();
+		}
+	}
+	
+	function rent_date(chk) {
+		var prev_chk = $("#rent_filter").val();
+		//if(prev_chk != "" && chk != prev_chk) {
+		//	$("#rlist_close").trigger("click");
+		//}
+	
+		$("#rent_filter").val(chk);
+		booking_new.date_apply();
+	}
+	
+	
+	//jQuery를 이용한 방법
+	/*
+	$(window).bind("pageshow", function(event) {     
+		//back 이벤트 일 경우
+		if (event.originalEvent && event.originalEvent.persisted) {        
+			$(window).unbind("touchmove");	    
+			if($.cookie("mid") != "") {
+				location.reload();
+				
+			}
+		}     
+	});
+	*/
+	
+	
+	$(function() {
+		
+			if($("#jehu").val() == "expedia_a") {
+			var chin_id = $.cookie('save_sdate_abr');
+			var chout_id = $.cookie('save_edate_abr');
+		} else {
+			//var chin_id = $.cookie('save_sdate');
+			//var chout_id = $.cookie('save_edate');
+			var chin_id = "2019-05-23";
+			var chout_id = "2019-05-24";
+		}
+	
+		var todaydt = "20190523";
+		todaydt = parseInt(todaydt);
+		var cookiedt = chin_id.replace(/-/gi, "");
+		cookiedt = parseInt(cookiedt);
+	
+		if(cookiedt >= todaydt) {
+			
+			/* 이용권 일 때*/
+			if($("#chk_single").val() == "Y" || $("#sale_single").val() == "Y") {
+				if(typeof chin_id != "undefined") {
+					$("input[name='hseldate']").val(chin_id);				
+					$("input[name='nseldate']").val(chin_id);
+					
+					var week = new Array('일', '월', '화', '수', '목', '금', '토');
+					var yoil_chin = new Date(chin_id).getDay();
+	
+					chin_str = chin_id.replace(/-/gi, ".");
+	
+					$("#chdate_text").text(chin_str+" ("+week[yoil_chin]+")");
+				}
+	
+			} else {
+				if(typeof chin_id != "undefined" && typeof chout_id != "undefined") {
+					
+	
+					var week = new Array('일', '월', '화', '수', '목', '금', '토');
+					var yoil_chin = new Date(chin_id).getDay();
+					var yoil_chout = new Date(chout_id).getDay();
+	
+					chin_str = chin_id.replace(/-/gi, ".");
+					chout_str = chout_id.replace(/-/gi, ".");
+	
+					/* 날짜차이로 숙박일수 알아내기 */
+					var diff = new Date(chout_id) - new Date(chin_id);
+					var currday = 24*60*60*1000;
+					diff = parseInt(diff/currday);
+					
+	
+					var basic_night = "";	
+					switch($("#jehu").val()) {
+						case "hottel":
+						case "pinspot":
+							basic_night = 1;
+							break;
+						
+						case "woori":
+						case "gpension":
+							basic_night = 6;
+							break;
+						
+						default:
+							basic_night = 15;
+							break;
+					}
+	
+					if(diff > basic_night) {
+	
+						var test = new Date(chin_id);
+						test.setDate(test.getDate()+1);
+						
+						yy = test.getFullYear();
+						mm = test.getMonth() + 1; 
+						mm = (mm < 10) ? '0' + mm : mm;
+	
+						dd = test.getDate(); 
+						dd = (dd < 10) ? '0' + dd : dd;
+						
+						var final_day = yy+"-"+mm+"-"+dd;
+						chout_id = final_day;
+						chout_str = chout_id.replace(/-/gi, ".");
+						var yoil_chout = new Date(chout_id).getDay();
+	
+						/* 날짜차이로 숙박일수 알아내기 */
+						var diff = new Date(chout_id) - new Date(chin_id);
+						var currday = 24*60*60*1000;
+						diff = parseInt(diff/currday);
+	
+	
+					}
+	
+	
+	
+					$("input[name='hseldate']").val(chin_id);
+					$("input[name='nseldate']").val(chout_id);
+	
+					$("#night").val(diff);
+					
+					$("#chin_text").text(chin_str+" ("+week[yoil_chin]+")");
+					$("#chout_text").text(chout_str+" ("+week[yoil_chout]+")");
+	
+					// 체크인 날짜와 체크아웃 날짜 사이의 숙박일수 변경
+					$("#night_cnt").text(diff+"박");
+	
+					// 객실 리스트에 노출되는 숙박일수 날짜 설정
+					$("#night_roomc").text(diff+" 기준");	
+				}
+				
+			}
+	
+		}
+		
+	});
+	
+	var callApp = {
+		isIPHONE: false,
+		isIPAD: false,
+		isANDROID: false,
+		isCHROME: false,
+		scheme: '',
+		appStoreUrl: '',
+		init : function(who) {
+			this.isIPHONE = (navigator.userAgent.match('iPhone') != null || navigator.userAgent.match('iPod') != null);
+			this.isIPAD = (navigator.userAgent.match('iPad') != null);
+			this.isANDROID = (navigator.userAgent.match('Android') != null);
+			this.isCHROME = (navigator.userAgent.match('Chrome') != null);
+	 
+			if (this.isANDROID) {
+				//this.scheme = 'intent://app.go.co.kr/?customparam2=1#Intent;scheme=gocokr://app.go.co.kr&app_move=Y;package=kr.co.go.travel.app;end';
+				this.scheme = "Intent://post_detail?url=http://app.go.co.kr/?#Intent;scheme=gocomain;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=kr.co.go.travel.app;end";
+			} else if (this.isIPHONE || this.isIPAD) {
+				this.scheme = 'gocokr://app.go.co.kr';
+				this.appStoreUrl = 'https://itunes.apple.com/app/id1091429916';
+			}            
+		},
+		getIframe: function(id, url) {
+			var iframe = document.getElementById(id);
+			if (iframe !== null) {
+				iframe.parentNode.removeChild(iframe);
+			}
+			iframe = document.createElement('iframe');
+			iframe.id = id;
+			iframe.style.visibility = 'hidden';
+			iframe.style.display = 'none';
+			iframe.src = url;
+			return iframe;
+		},
+		exec: function(who, url) {
+			this.init(who);
+			if (this.isANDROID) { /* 안드로이드 */
+				if(url != "") {
+					this.scheme = 'Intent://post_detail?url='+url+'?#Intent;scheme=gocomain;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=kr.co.go.travel.app;end'
+				}
+				location = this.scheme;                
+			} else if (this.isIPHONE || this.isIPAD) { /* IOS */
+				if(url != "") {
+					this.scheme = 'gocokr://test1?url='+url;
+				}
+				setTimeout(function() {
+					location = callApp.appStoreUrl;
+				}, 500);
+				location.href = this.scheme;
+				var iframe = this.getIframe('callAppIframe', this.scheme);
+				document.body.appendChild(iframe);
+			} else { /* 그 외 단말기 */
+				location = url;
+			}
+		}
+	}
+	</script>
+	
+	
+			<div id="notice_w">
+				<div class="notice_in">
+					<h4><img src="http://img.ocean2you.co.kr/renew/logo.png" width="25px" style="margin-top:3px; margin-right:5px">
+					<span class="or_txt">오션투유리조트 속초설악비치 호텔앤콘도</span>에서 알립니다!</h4>
+					<p>★ 주중(일~금) 체크인 고객에 한해 2인 조식뷔페 무료제공 (★공휴일전/토요일 체크인 시 유료)
+	- 추가요금 : 1인 7,000원 (대/소인 구분없음, 36개월 미만 무료)
+	
+			 
+	※ 액션패키지는 구매시 이용권은 카카오톡 알림톡으로 발송됩니다.
+	※ 액션패키지 → "스마트인피니" 알림톡 발송				</p>
+				</div>
+			</div>
+			
+			<!-- 숙소정보 -->
+			<div id="room_w" style="overflow-x:hidden;overflow-y:auto">			
+				<div id="room_infogo">
+				<div>
+					<img src="http://img.ocean2you.co.kr/go/event_waterpia.jpg" alt="" style="width:100%">
+					<img src="http://img.ocean2you.co.kr/renew/tbn_pet2.jpg" alt="애완동물동반투숙" width="100%" id="pet_banner">
+									<img src="http://img.ocean2you.co.kr/go/event_food.jpg" alt="바베큐구매" width="100%">
+									<!--<img src="http://img.ocean2you.co.kr/renew/reservation/banner_bus.jpg" alt="셔틀버스안내" width="100%" onclick="$('#pop-bustour').show();">-->
+	
+				</div>
+				<h3><img src="http://img.ocean2you.co.kr/renew/logo_fixed.png" height="22px">  숙소정보</h3>
+	
+	<div class="room_ti_tx">
+		<div class="room_ti_tx_in">	
+			<h4></h4>
+			<p>설악/속초/고성 위치!<br>
+	삼포해수욕장 바로 앞<br>
+	오션투유리조트<br>
+	<br>
+	- 설악/속초/고성 아우르는 최고의 리조트!  <br>
+	- 에메랄드 빛 삼포해변 1분거리!<br>
+	- 얕은 수심, 어린아이 위한 해수욕장!<br>
+	- 해변에서 조개잡이 가능<br>
+	  (조개잡이 물품 구매가능) <br>
+	- 속초, 설악 모든 해변과 근접! <br>
+	- 최대80%할인 , 특가할인<br>
+	<br>
+	▶ 단체 문의<br>
+	오션투유콘도는 최대 1800명 까지 수용 가능한 대형콘도입니다.<br>
+	기업체/단체교육/워크샵/수학여행/수련회/세미나<br>
+	워크샵/가족모임/행사/MICE(마이스)/설명회/연회장<br>
+	컨벤션/학회/기업행사/디너쇼/전시회/컨퍼런스<br>
+	비지니스미팅/소규모모임/대규모모임/여름성경학교<br>
+	<br>
+	▶견적문의<br>
+	단체 상담 및 견적문의<br>
+	예약실 : 1666-5683<br>
+	<br><br> 
+				 
+					</p>
+		</div>
+	</div>
+	
+	<div class="room_tx_w">
+		
+		<div class="room_tx_in">
+					<h3 class="room_title"><img src="http://img.ocean2you.co.kr/renew/logo_fixed.png" height="22px">안내 및 유의사항</h3><div class="txt_forms">
+					<br><span style="font-weight:bold"> [펫룸] 이용시 주의사항</span><br><p>★모든객실은 1마리 까지 동반 투숙이 가능하며 1마리당 10kg으로 제한되어있습니다.</p><p>1. 애갠동반객실 구비물품 : 식기 및 물그릇, 배변판+패드</p><p>2. 입실 전 프론트에 알려주시기 바랍니다.</p><p>→기본 예방접종을 하지 않은 애완견은 투숙이 불가능합니다.</p><p>→입실 시 프론트에서 애완견 관련 서약서에 동의, 서명 부탁드립니다.</p><p>(최근 3개월이내 예방접종을 하였음, 시설내에서는 강아지를 안고 다님 등의 서약 내용)</p><p>3. 이용 시 또는 이용 후 다음 분을 위해 아래 부분은 지켜주시기 바랍니다.</p><p>→ 외출 후 객실 입실 시 애완동물의 발을 닦아주시기 바랍니다.</p><p>→ 객실 이용 시 배설물은 변기에 버려주시고 패드는 위생팩에 담아 휴지통에 버려 주시기 바랍니다.</p><p>→ 객실 내 침구 비품 등 설비 등을 파손 또는 심하게 오염시키는 경우 별도 수리비 등이 부과될 수 있습니다. (체크인 시 , 카드 오픈 또는 현금 보증 요청)</p><p>→ 안정을 위하여 호텔 주차장, 엘리베이터, 로비 안에서는 애완견을 꼭 안아주시거나 하네스를 착용 해주시기 바랍니다.</p><p>※ [게스트하우스] 이용안내</p><p>* 제공물품 : 1인당 수건 2장 / 어메니티(공용) : 샴푸,린스,바디워시,비누</p><p>* 조식제공 (07:30~10:00)</p><p>* 바베큐 파티 (18:30~22:30)</p><p>- 기준 : 3인이상 예약시 진행가능 (인원미달시 취소)</p><p>- 금액 : 1인당 20,000원</p><p>- 제공 : 삼겹살 + 샐러드바 + 호프 무한제공</p><p>- 장소 : 1층 야외 바베큐장</p><p>* 기준인원 초과시, 현장에서 추가요금이 발생합니다.</p><p>* 공동으로 사용하는 공간인만큼, 아래의 이용규칙을 준수해주시기 바랍니다.</p><p>- 1인 1베드 지켜주시기 바랍니다.</p><p>- 오후 12시 이전 입실을 권장합니다.</p><p>- 개인물품 보관에 관한 책임은 본인에게 있습니다.</p><p>- 업체 시설물의 파손 및 분실시 배상을 요구할 수 있습니다.</p><p>오션투유리조트는 삼포해수욕장에 위치해 있습니다. (해변까지 걸어서 1분소요)</p><p>오션투유리조트 바로앞으로 펼쳐지는 해수욕장은 </p><p>푸른 동해에서도 가장 깨끗한 해수욕장 중 하나로 꼽힙니다. </p><p>깨끗한 백사장에는 많은 조개가 있고, 채취도 가능합니다. (조개 채취 도구 프론트 문의하세요)</p><p>[오션투유 이용안내]</p><p>* 오션투유는 전객실이 23평형 동일한 크기입니다.</p><p>* 책정된 요금은 4인 기준이며, 최대 7인까지 입실 가능합니다.</p><p>* 기준인원을 초과하여 입실하는 경우, 1인 20,000원의 추가요금이 있습니다.(7세이하 소인 1명 무료추가가능/침구류 포함/현장결제)</p><p>* 특급호텔 "라마다"와 동일한 최고급 어메니티를 제공해드리므로써 휴식의 품격을 높여드립니다.</p><p>* 수건은 체크인 하는 인원수 만큼 제공됩니다.</p><p>* 추가수건은 5장단위로, 5천원의 추가요금이 있습니다.(프론트문의)</p><p>* 드라이기가 필요하신 고객님은, 체크인시 프론트에서 대여해 가시면 됩니다.(무상대여)</p><p>[오션투유 부대업장 이용안내]</p><p>※ 조식 및 한식당 '다연' 이용안내</p><p>* 조식은 리조트 1층, 한식당 다연에서 운영됩니다.</p><p>* 조식 운영시간은 07:30 ~ 10:00 까지 운영됩니다.</p><p>* 메뉴 및 이용가격</p><p>- 아메리칸뷔페 </p><p>① 성인 : 12,000원(현장결제) / 9,900원(온라인결제)</p><p>② 소인 : 9,000원(현장결제) / 7,000원(온라인결제)(소인기준:36개월이상~8세미만)</p><p>- 단품메뉴</p><p>① 광어미역국: 12,000원(현장결제) / 11,000원(온라인결제)</p><p>② 우거지갈비탕 :8,000원(현장결제) /7,500원(온라인결제)</p><p>③ 황태해장국:8,000원(현장결제) /7,500원(온라인결제)</p><p>※ 단품메뉴는 11시~20시까지 중식 및 석식으로도 이용 가능합니다.</p><p>※ 오션숯불갈비&amp;바베큐 이용안내</p><p>* 16:00 부터 ~ 22:00 까지 운영됩니다.</p><p>* 22:00 까지의 이용인원이 많을 경우, 마감시간이 연장될 수 있습니다.</p><p>* 오션숯불갈비&amp;바베큐 이용시, 외부음식은 절대 반입금지 입니다.</p><p>* 동절기 및 기상악화시에는 실내바베큐장에서 운영됩니다. </p><p>* 실내바베큐장 운영시, 화재예방을 위해 전기그릴이 제공됩니다.</p><p>* 이용시간은 입장 후, 2시간입니다.</p><p>* 이용자가 많은 경우, 일부 대기시간이 발생할 수 있습니다.</p><p>* 숯 추가가 필요한 경우 5,000원의 추가요금(현장결제)이 있습니다.</p><p>* 메뉴 및 이용가격</p><p>- 셋트메뉴 </p><p>① 커플셋트 : 39,000원(2~3인분, 목살200g+삼겹살200g+훈제오리100g+돼지갈비 100g+된장찌개+새우2마리)</p><p>② 패밀리셋트 :75,000원(4~6인분, 목살400g+삼겹살400g+돼지갈비300g+훈제오리200g+된장찌개+새우5마리)</p><p>- 단품메뉴 </p><p>① 삼겹살: 1인분 200g 13,000원</p><p>② 목살: 1인분 200g 13,000원</p><p>③ 돼지갈비: 1인분 200g 15,000원</p><p>④ 막창: 1인분 200g 15,000원</p><p>- 식사류 </p><p>① 공기밥: 1,500원</p><p>② 조개된장찌개 : 5,000원</p><p>- 주류 및 음료 </p><p>① 소주, 맥주, 와인, 사케, 양주, 보드카 등 현장 구매가능</p><p>② 콜라, 사이다, 환타 등 현장구매 가능</p><p>- 기타(바베큐장 이용 및 룸으로 배달 가능합니다.)</p><p>① 바베큐플레이츠 : 19,000원</p><p>② '속초횟집'과 연계되어, 회, 매운탕 등을 바베큐장에서 이용하실 수 있습니다.</p><p>* 바베큐장 대여만도 가능하며, 대여는 시설에 문의하시기 바랍니다. </p><p>* 바베큐장 자리만 대여 가격 : 40,000원/현장결제</p><p>※ 속초횟집 이용안내</p><p>* 16:00 부터 ~ 22:00 까지 운영됩니다.</p><p>* 22:00 까지의 이용인원이 많을 경우, 마감시간이 연장될 수 있습니다.</p><p>* 메뉴 및 이용가격</p><p>- 회</p><p>① 모듬회: 소 30,000원 / 중 50,000 / 대 70,000원</p><p>② 광어세꼬시: 소 30,000원 / 중 50,000원</p><p>- 매운탕</p><p>① 생우럭매운탕 : 소 30,000원 / 중 50,000원</p><p>② 생우럭지리: 소 30,000원 / 중 50,000원</p><p>③ 잡뼈 매운탕: 20,000원</p><p>- 특선메뉴</p><p>① 회무침: 30,000원</p><p>② 물회: 10,000원(2인 이상 주문가능)</p><p>③ 회덮밥: 12,000원(2인 이상 주문가능)</p><p>※ 삼포비치바이크(전동바이크) 이용안내</p><p>* 10:00 부터 ~ 20:00 까지 운영됩니다.(20:00시까지 반납)</p><p>* 리조트 입구, 오른편에 위치해 있습니다.</p><p>* 1인승, 2인승 2가지 타입이며, 1시간 단위로 이용 가능합니다.</p><p>* 초보자도 쉽게 전동바이크가 운행하기에 좋은 해안도로가 있습니다.</p><p>* 보호장비는 무상대여해 드립니다.</p><p>※ 낚시 이용안내</p><p>* 낚시대 대여 이용시간은 07:00 ~ 17:00 입니다. ( 17:00 까지 반납 )</p><p>* 구성품목 : 낚시대 1대, 삼각대 1대, 두레박 1개, 묶음추 2개, </p><p>목장갑 1개, 갯지렁이 1박스</p><p>* 현장에서 낚시용품 추가 구매 가능합니다.</p><p>* 분실 및 파손시 배상을 요구할 수 있습니다.</p><p>* 원하는 시간대에 프론트에 말씀하셔서 도구를 수령받으세요.</p><p>※ 라바짜(커피숍) 이용안내</p><p>* 10:00 부터 ~ 20:00 까지 운영됩니다.</p><p>* 리조트 입구, 정면에 위치해 있습니다.</p><p>* 아메리카노, 라떼 등 다양한 커피 메뉴 구매가 가능합니다.</p><p>* 허브, 자스민, 녹차 등 다양한 차 메뉴 구매가 가능합니다.</p><p>* 오렌지쥬스, 포도쥬스 등 다양한 쥬스 메뉴 구매가 가능합니다. </p><p>※ 노래방 이용안내</p><p>* 18:00 부터 ~ 24:00 까지 운영됩니다.</p><p>* 이용고객이 많은 경우, 연장 운영할 수 있습니다.</p><p>* 리조트 지하 1층에 위치해 있습니다.</p><p>※ GS편의점</p><p>* 리조트 1층에 GS편의점이 입점되어 있습니다.</p><p>* 규모가 큰 편의점으로, 다양한 물품이 구비되어 있습니다. </p><p>* 일~금 : 08:00 ~ 23:00</p><p>토: 08:00 ~ 24:00 까지 운영됩니다.</p><p>* 편의점 운영시간은 현장 상황에 따라 단축 또는 연장될 수 있습니다.</p><p>[리조트 오시는길]</p><p>※ 주소 : 강원 고성군 죽왕면 삼포해변길 9 또는 삼포해수욕장 입력</p><p>※ 대중교통 이용시</p><p>- 간성시외버스터미널 하차 시 : 신안리 정류장에서 1번, 1-1번 버스 승차, 오호초교에서 하차</p><p>- 속초고속버스터미널 하차 시 : 속초고속버스터미널 정류장에서 1번, 1-1번 승차, 오호초등학교 하차</p><p>- 속초시외버스터미널 하차 시 : 수복탑 정류장에서 1번, 1-1번 버스 승차, 오호초등학교 하차</p><p>※ 기타 대중교통 안내</p><p>① 고성삼포해변행(수도권) 18,000원</p><p>② 고성삼포해변행(강원권) 12,000원</p><p>③ 귀가행(수도권_잠실종합운동/서울역) 18,000원</p><p>④ 귀가행(강원권_강릉고속버스터미널/강릉역) 12,000원</p><p>[리조트 단체 안내]</p><p>※ 오션투유리조트는 1,800명이 동시 이용가능한, 대형리조트입니다. </p><p>※ 기업체, 단체교육, 워크샵, 수학여행, 수련회, 세미나, 워크샵, 가족모임, 행사,MICE(마이스)/설명회/연회장/컨벤션/학회/</p><p>기업행사/디너쇼/전시회/컨버런스/비지니스미팅/소규모모임/대규모모임/여름성경학교 등 다양한 행사진행이 가능합니다.</p><p>※ 단체 이용에 대한 문의는 010-3066-4665 로 연락주시기 바랍니다.(365일, 24시간 통화가능)</p><br>
+					
+				  </div>
+				  </div>
+		<!-- 객실안내 -->
+		<div class="room_tx_in">	
+			<h4 class="room_title" id="room_imgscroll"><img src="http://img.ocean2you.co.kr/renew/logo_fixed.png" height="22px"> 객실안내</h4>
+			<div class="txt_forms">
+		<p>
+		<img src="http://img.ocean2you.co.kr/room_introduce_stdd_mtv_m.jpg?ver=20190523105257" alt="스탠다드마운틴뷰" style="width:100%">
+			<img src="http://img.ocean2you.co.kr/room_introduce_stdd_ocnv_m.jpg?ver=20190523105257" alt="스탠다드오션뷰" style="width:100%">
+			<img src="http://img.ocean2you.co.kr/room_introduce_rnvtn_cnd_m.jpg?ver=20190523105257" alt="리노베이션콘도" style="width:100%">
+			<img src="http://img.ocean2you.co.kr/room_introduce_rnvtn_ht_m.jpg?ver=20190523105257" alt="리노베이션호텔" style="width:100%">	</p>
+		</div>
+	</div>
+	
+	
+		
+		
+	<!-- 위치정보 -->
+	<div id="location_w" style="width:99%">
+		<h3><img src="http://img.ocean2you.co.kr/renew/logo_fixed.png" height="22px">  위치정보</h3>
+		<div class="location_map">
+				<div style="font:normal normal 400 12px/normal dotum, sans-serif; width:100%; height:233px; color:#333; position:relative"><div style="height: 200px;"><a target="_blank" href="http://map.daum.net/?urlX=834733.0&amp;urlY=1340772.0&amp;itemId=616076052&amp;q=%EC%98%A4%EC%85%98%ED%88%AC%EC%9C%A0%EB%A6%AC%EC%A1%B0%ED%8A%B8%20%EC%84%A4%EC%95%85%EB%B9%84%EC%B9%98%20%ED%98%B8%ED%85%94%EC%95%A4%EC%BD%98%EB%8F%84&amp;srcid=616076052&amp;map_type=TYPE_MAP&amp;from=roughmap"><img class="map" src="http://t1.daumcdn.net/roughmap/imgmap/2595319f1075561746395672337019aa2ff69fab0ca9ed1931e1155f9a6b56b1" width="100%" height="198px" style="border:1px solid #ccc;"></a></div><div><span style="border-left:1px solid #dbdbdb;border-right:1px solid #dbdbdb;border-bottom:1px solid #dbdbdb;box-sizing:border-box;box-sizing:border-box;background-color:#f9f9f9;position:absolute;left:0px;top:200px;width:100%;height:33px"></span><span style="position:absolute;left:12px;top:207px"><img src="http://t1.daumcdn.net/localimg/localimages/07/2013/map/test/ico_road.gif"></span><a href="http://map.daum.net/?from=roughmap&amp;srcid=616076052&amp;confirmid=616076052&amp;q=%EC%98%A4%EC%85%98%ED%88%AC%EC%9C%A0%EB%A6%AC%EC%A1%B0%ED%8A%B8%20%EC%84%A4%EC%95%85%EB%B9%84%EC%B9%98%20%ED%98%B8%ED%85%94%EC%95%A4%EC%BD%98%EB%8F%84&amp;rv=on" target="_blank" style="text-decoration: none;color: #333;font:normal normal 400 12px 돋움, dotum, sans-serif;line-height:1;position:absolute;left:29px;top:211px">로드뷰</a><span style="position:absolute;left:81px;top:207px"><img src="http://t1.daumcdn.net/localimg/localimages/07/2013/map/test/ico_street.gif"></span><a href="http://map.daum.net/?from=roughmap&amp;eName=%EC%98%A4%EC%85%98%ED%88%AC%EC%9C%A0%EB%A6%AC%EC%A1%B0%ED%8A%B8%20%EC%84%A4%EC%95%85%EB%B9%84%EC%B9%98%20%ED%98%B8%ED%85%94%EC%95%A4%EC%BD%98%EB%8F%84&amp;eX=834733.0&amp;eY=1340772.0" target="_blank" style="text-decoration: none;color: #333;font:normal normal 400 12px 돋움, dotum, sans-serif;line-height:1;position:absolute;left:97px;top:211px">길찾기</a></div></div>
+			</div>
+		<div class="location_info">
+			<div class="location_info_txt">
+				<span class="info_txt_tit">[리조트] </span><br>
+								<span class="info_txt_stit">주소: 강원 고성군 죽왕면 삼포해변길 9  <br>(구주소: 강원 고성군 죽왕면 삼포리 243-13)<br>
+							전화번호: 1666-1243			</span>
+			</div>
+		</div>
+	</div>	<style>
+	/* 기본 테이블 스타일_170720_혜준 */
+	.table-type01 {width: 100%; border-collapse: collapse;}
+	.table-type01 th, .table-type01 td {width: 50%; border: 1px solid #c8c8c8; font-size: 14px; text-align: center; vertical-align: middle; height: 30px; color: #7b7b7b;
+		letter-spacing: -0.5px; font-weight: normal;}
+	.table-type01 th {background: #e4e3e3;}
+	</style>
+					<div class="room_tx_in">	
+					<h3 class="room_title"><img src="http://img.ocean2you.co.kr/renew/logo_fixed.png" height="22px"> 환불안내</h3>
+					<div class="txt_forms">
+					<p>
+						※ 일부 상품에 한하여 공통규정 외의 규정이 적용되는 상품도 존재하오니, 예약전 필히 확인 부탁드립니다. <br>
+						※ 취소 및 환불 규정을 확인하지 못하여 발생하는 부분은 책임지지 않습니다.<br>
+						※ 영업일 기준 이므로, 비영업일 또는 17 시 이후 취소접수건은 익일영업일 기준으로 진행됩니다.<br>
+						
+								<br>
+								<b>[공통 취소규정]</b><br>
+								</p><table class="table-type01" style="width:100%;margin-top:10px;margin-bottom:10px">
+									<colgroup>
+										<col width="*">
+										<col width="25%">
+										<col width="25%">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th style="width:25%">구분</th>
+											<th style="width:25%">취소수수료율</th>
+											<th style="width:25%">환불액</th>
+										</tr>
+								
+										<tr>
+											<td style="text-align:left;font-size:12px;width:24%;padding-left:1%">이용일 기준 15일전</td>
+											<td style="text-align:center;font-size:12px;width:25%">10%</td>
+											<td style="text-align:center;font-size:12px;width:25%">90% 환불</td>
+										</tr>
+										
+										<tr>
+											<td style="text-align:left;font-size:12px;width:24%;padding-left:1%">이용일 기준 14~10일전</td>
+											<td style="text-align:center;font-size:12px;width:25%">20%</td>
+											<td style="text-align:center;font-size:12px;width:25%">80% 환불</td>
+										</tr>
+										
+										<tr>
+											<td style="text-align:left;font-size:12px;width:24%;padding-left:1%">이용일 기준 9~7일전</td>
+											<td style="text-align:center;font-size:12px;width:25%">40%</td>
+											<td style="text-align:center;font-size:12px;width:25%">60% 환불</td>
+										</tr>
+										
+										<tr>
+											<td style="text-align:left;font-size:12px;width:24%;padding-left:1%">이용일 기준 6일전</td>
+											<td style="text-align:center;font-size:12px;width:25%">70%</td>
+											<td style="text-align:center;font-size:12px;width:25%">30% 환불</td>
+										</tr>
+										
+										<tr>
+											<td style="text-align:left;font-size:12px;width:24%;padding-left:1%">이용일 기준 5일전~당일</td>
+											<td style="text-align:center;font-size:12px;width:25%">100%</td>
+											<td style="text-align:center;font-size:12px;width:25%">0% 환불</td>
+										</tr>
+												
+									</tbody>
+								</table>				<p></p>
+					</div>
+				</div>
+		
+	<div class="room_tx_in">	
+		<div id="travel_etc">
+			<h4 class="room_title"><img src="http://img.ocean2you.co.kr/go/mobile/slogan_icon.png" height="22px"> 주변여행지</h4>
+			<div class="txt_forms">
+				<div class="attractions_trip">
+				<dl>
+		<dt>
+			<img src="http://img.ocean2you.co.kr/attractions_trip01.jpg" alt="삼포해수욕장">
+		</dt>
+		<dd>
+		<h3 style="width:583px">삼포해수욕장
+		<div onclick="move_hid('reservation_go','id','gnb2');" style="float:right; width: 110px !important; background-color: #fc762e; border-radius: 6px; color: #fff; text-align:center; font-size: 15px; line-height: 1; font-weight: 600; display: inline-block;cursor:pointer">예약하기</div>
+		</h3>
+			<div>
+				삼포코레스코 콘도 앞으로 펼쳐지는 해수욕장은 푸른 동해에서도 가장 깨끗한 해수욕장 중<br>하나로 꼽힙니다. 잘 갖춰진 편의 시설과 깔끔한 민박단지로 구성되어 있습니다. 조개체험 가능합니다.
+			</div>
+			<ul>
+				<li style="float:left;">
+					<img src="http://img.ocean2you.co.kr/icon_map.jpg" style="margin-right:10px;">위치 : 강원도 고성군 죽왕면 삼포리 1
+				</li>
+				<li style="float:left;">
+					<img src="http://img.ocean2you.co.kr/icon_call.jpg" style="margin-right:10px">문의전화 : 033-680-3357
+				</li>
+			</ul>
+		</dd>
+	</dl>
+	<dl>
+		<dt>
+			<img src="http://img.ocean2you.co.kr/attractions_trip05.jpg" alt="봉포간이해변">
+		</dt>
+		<dd>
+		<h3 style="width:583px">봉포간이해변
+		<div onclick="move_hid('reservation_go','id','gnb2');" style="float:right; width: 110px !important; background-color: #fc762e; border-radius: 6px; color: #fff; text-align:center; font-size: 15px; line-height: 1; font-weight: 600; display: inline-block;cursor:pointer">예약하기</div>
+		</h3>
+			<div>
+				낚시와 해수욕을 같이 즐길 수 있는 사계절 해변입니다. 샤워실, 화장실, 야영장 시설들을 제공하며<br>요금은 무료입니다. 개장기간은 매년 7~8월 중입니다.
+			</div>
+			<ul>
+				<li style="float:left;">
+					<img src="http://img.ocean2you.co.kr/icon_map.jpg" style="margin-right:10px;">위치 : 강원도 고성군 토성면
+				</li>
+				<li style="float:left;">
+					<img src="http://img.ocean2you.co.kr/icon_call.jpg" style="margin-right:10px">문의전화 : 033-680-3361
+				</li>
+			</ul>
+		</dd>
+	</dl>
+	<dl>
+		<dt>
+			<img src="http://img.ocean2you.co.kr/attractions_trip06.jpg" alt="화암사">
+		</dt>
+		<dd>
+		<h3 style="width:583px">화암사
+		<div onclick="move_hid('reservation_go','id','gnb2');" style="float:right; width: 110px !important; background-color: #fc762e; border-radius: 6px; color: #fff; text-align:center; font-size: 15px; line-height: 1; font-weight: 600; display: inline-block;cursor:pointer">예약하기</div>
+		</h3>
+			<div>
+				화암사는 오랜 세월 동안 흙속에 묻힌 옥돌처럼 빛을 보지 못하다가 근래에 이르러<br>새로 재건 단장되어 많은 불자들과 탐방객들의 발길이 끊이지 않고 있습니다.
+			</div>
+			<ul>
+				<li style="float:left;">
+					<img src="http://img.ocean2you.co.kr/icon_map.jpg" style="margin-right:10px;">위치 : 강원도 고성군 토성면 화암사길 100
+				</li>
+				<li style="float:left;">
+					<img src="http://img.ocean2you.co.kr/icon_call.jpg" style="margin-right:10px">문의전화 : 033-633-1525
+				</li>
+				<li style="clear:both">
+					<img src="http://img.ocean2you.co.kr/icon_homep.jpg" style="margin-right:10px;">홈페이지 : www.hwaamsa.com/
+				</li>
+			</ul>
+		</dd>
+	</dl>
+	<dl>
+		<dt>
+			<img src="http://img.ocean2you.co.kr/attractions_trip07.jpg" alt="설악워터피아[보양온천]">
+		</dt>
+		<dd>
+		<h3 style="width:583px">설악워터피아[보양온천]
+		<div onclick="move_hid('reservation_go','id','gnb2');" style="float:right; width: 110px !important; background-color: #fc762e; border-radius: 6px; color: #fff; text-align:center; font-size: 15px; line-height: 1; font-weight: 600; display: inline-block;cursor:pointer">예약하기</div>
+		</h3>
+			<div>
+				푸른 동해바다와 변화무쌍한 설악산의 아름다움, 그리고 형용하기 어려운 천혜의<br>자연 조건들과 조화를 이룬, 천연 온천수로 즐기는 종합 온천 워터파크입니다.
+			</div>
+			<ul>
+				<li style="float:left;">
+					<img src="http://img.ocean2you.co.kr/icon_map.jpg" style="margin-right:10px;">위치 : 강원도 속초시 미시령로2983번길 111
+				</li>
+				<li style="float:left;">
+					<img src="http://img.ocean2you.co.kr/icon_call.jpg" style="margin-right:10px">문의전화 : 033-635-7700
+				</li>
+				<li style="clear:both">
+					<img src="http://img.ocean2you.co.kr/icon_homep.jpg" style="margin-right:10px;">홈페이지 : www.hanwharesort.co.kr/
+				</li>
+			</ul>
+		</dd>
+	</dl>
+	
+	<img src="http://img.ocean2you.co.kr/attractions_roadMap-goseong(8view).jpg" alt="주변여행지_로드맵-고셩(8경)" style="width:100%">
+	<img src="http://img.ocean2you.co.kr/attractions_roadMap-cycleandbeach.jpg" alt="주변여행지_로드맵-자전거길,주변해수욕장" style="width:100%">
+	<img src="http://img.ocean2you.co.kr/attractions_aliveheart_dynamicmaze.jpg" alt="주변여행지_얼라이브하트,다이나믹매이즈" style="width:100%">
+	<img src="http://file.tournspa.co.kr/dimg/1494220485_16.jpg" alt="상품소개이미지16" width="100%">
+	<img src="http://file.tournspa.co.kr/dimg/1493010482_17.jpg" alt="상품소개이미지17" width="100%">
+	<img src="http://file.tournspa.co.kr/dimg/1493009499_18.jpg" alt="상품소개이미지18" width="100%">
+	<iframe title="속초여행 오션투유콘도 (삼포해수욕장) 2박3일 후기" width="100%" src="http://kakaotv.daum.net/embed/player/cliplink/302952892?service=daum_tistory" allowfullscreen="" frameborder="0" scrolling="no"></iframe>
+	<iframe title="속초여행 오션투유콘도 (삼포해수욕장) 2박3일 후기" width="100%" src="http://kakaotv.daum.net/embed/player/cliplink/302952911?service=daum_tistory" allowfullscreen="" frameborder="0" scrolling="no"></iframe>
+	<p style="font-weight:bold;margin-top:20px;margin-bottom:20px;font-size:16px;"><a href="http://chldudwn22.tistory.com/64" target="_blank"><span style="color:#ff0000">[관련내용 자세히보기]</span> http://chldudwn22.tistory.com/64</a></p>			</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+			<div class="room_tx_in">	
+				<h3 class="room_title"> 
+				<img src="http://img.ocean2you.co.kr/renew/logo_fixed.png" height="22px"> 
+				확인사항 및 기타문의</h3>
+				<div class="txt_forms">
+				<p>
+					<span class="room_tx_icon">ㆍ</span> <span class="room_tx_tx">해당 금액은 세금, 봉사료가 포함된 금액입니다.</span><br>
+					<span class="room_tx_icon">ㆍ</span> <span class="room_tx_tx">위의 정보는 업체 사정에 따라 변경될 수 있습니다. </span><br>
+								</p>
+				</div>
+			</div>
+		
+	</div>
+	
+	
+			</div>
+	
+			<!-- 고객센터 문의하기 배너 -->
+			<div id="q_quest"> 
+				<p>무엇을 도와드릴까요?</p>
+				<p>전문 상담원에게 물어보세요</p>
+				<p><a href="javascript:cus_on('#q_modal', 'on');">고코투어 빠른 문의하기</a></p>
+			</div>
+	
+			<style type="text/css">
+				#q_modal ul li:nth-child(3) a:before {
+					background-position: center -475px;
+				}
+			</style>
+	
+			<div id="q_modal" style="display:none;height:auto;padding-bottom:5px;">
+				<h2>문의 하기<a href="javascript:cus_on('#q_modal', 'out');" class="q_clsBtn"></a></h2>
+				<ul>
+					<!---<li><a href="http://ocean2you.co.kr/home/customer/?dd=Tx8x">자주묻는 질문</a></li>--->
+					<li><a href="http://ocean2you.co.kr/customer/?dd=RRczV2w=&amp;brd=RhAl">1:1 문의하기</a></li>
+					<!-- 평일 9시~18시에만 카카오톡 항목 노출 그 외 1:1 문의하기 
+									<li><a href="http://plus.kakao.com/home/lwaac3va" target="_blank">카카오톡 문의</a></li>
+					 -->
+	
+					<!-- 평일 09시~02시, 주말 공유일 09시 ~ 17시 항목 노출, 그 외 비노출 -->
+									<li><a href="javascript:cus_on('#q_notice', 'on');">전화 문의</a></li>
+									<li>
+					<a href="#" onclick="$('#group_opop').show();">단체문의</a>
+					<!--<a href="http://ocean2you.co.kr/customer/?dd=XgwpVzs=&brd=RhAl&p_no=HE93&abr=&type=group">단체문의</a>-->
+					</li>
+				</ul>
+			</div>
+	
+			<div id="q_notice" style="display:none;">
+				<h2>알림<a href="javascript:cus_on('#q_notice', 'out');" class="q_clsBtn"></a></h2>
+				<div>
+					<p>고코투어 고객센터로 전화 연결합니다</p>
+					<p>(상담시간: 평일 오전 9시 ~ 오후 2시
+							<br>주말공휴일 오전 9시 ~ 오후 5시)
+					</p>
+				</div>
+				<p><a href="javascript:cus_on('#q_notice', 'out');">취소</a><a href="tel:1666-1243">전화연결</a></p>
+			</div>
+			<!-- 카톡상담 
+			<div id="kaka_advice">
+				<span class="txt">더 궁금한 사항은 언제든지 문의주세요.</span><br/>
+				<span class="btn"><a href="kakaoplus://plusfriend/friend/@고코투어"><img src="http://img.ocean2you.co.kr/go/mobile/pruduct_ka_bt.png" width="90px" /></a></span>
+			</div>
+			-->
+		</div>
+	
+	
+	
+	<style>
+	.img_t { font-size:0.813em; color:#fff; letter-spacing:1px; text-align:center; opacity:none; line-height:23px;vertical-align:middle; }
+	.img_txt { position: absolute; bottom:30px; border-radius:80px; background-color: rgba(75,68,67,0.7); position:absolute; left:50%; transform:translate(-50%); padding: 0 20px; height:23px;text-align:center;color:#fff; text-overflow:ellipsis;white-space:nowrap;} 
+	
+	
+	.swiper-button-prev, .swiper-container-rtl .swiper-button-next {background-image:none;opacity:1}
+	.swiper-button-next, .swiper-container-rtl .swiper-button-prev {background-image:none;text-align:right;opacity:1}
+	.swiper-scrollbar-drag { background-color:#FFFFFF; }
+	.swiper-container-horizontal>.swiper-scrollbar { background-color:rgba( 255, 255, 255, 0.5 ); margin-bottom:5px; height:3px} /* 흰색 바에 불투명도 */
+	
+	.swiper-container-horizontal>.swiper-pagination { bottom: 0.5;}
+	.swiper-container-horizontal>.swiper-pagination .swiper-pagination-bullet {margin:0 4px;} 
+	.swiper-pagination-bullet {background:#ffffff;width:10px;height:10px;opacity:0.5;}
+	.swiper-pagination-bullet-active {background:#ff4300;opacity:1}
+	
+	.pop_snsShare{position:absolute; z-index:999; left:5%; top:20%; margin:auto; width:90%; border-radius:10px; background:#fff; color:#000; text-align:center; letter-spacing:-0.5px}
+	.pop_snsShare .title{float:left; position:relative; width:100%; padding:10px 0; border-top-left-radius:10px; ; border-top-right-radius:10px; background:#f95c24; }
+	.pop_snsShare .title p{padding-left:20px; font-size:1.125em; text-align:left; color:#fff;}
+	.pop_snsShare .title .close{position:absolute; top:10px; right:15px}
+	.pop_snsShare .iconBox{display:table; width:100%; padding:30px 0; border-bottom-left-radius:10px; ; border-bottom-right-radius:10px; background:#fff; letter-spacing:-1px}
+	.pop_snsShare .iconBox .icon{display:table-cell; text-align:center}
+	.pop_snsShare .iconBox .icon a{color:#3f3f3f; font-size:0.875em; letter-spacing:-1px}
+	
+	</style>
+	
+	
+	<!--- 지도앱 레이어 --->
+	<div class="pop_snsShare" style="display:none" id="map_layer">
+		<div class="title"><p>지도앱에서 길찾기 <span class="close"><a href="javascript:utils.out('#map_layer');"><img src="http://img.ocean2you.co.kr/go/mobile/btn_close2.png" width="25" height="25" alt="닫기"></a></span></p></div>
+		<div class="iconBox">
+			<span class="icon"><a href="http://map.daum.net/link/map/38.3170019,128.5309772" target="_blank"><img src="http://img.ocean2you.co.kr/go/mobile/icon_mapdaum1.png" width="45" height="45"><br>다음맵</a></span>
+			<span class="icon"><a href="http://map.naver.com/?x=128.5309772&amp;y=38.3170019&amp;enc=b64" target="_blank"><img src="http://img.ocean2you.co.kr/go/mobile/icon_mapnaver1.png" width="45" height="45"><br>네이버맵</a></span>
+			<span class="icon"><a href="https://www.google.co.kr/maps/@38.3170019,128.5309772,12z" target="_blank"><img src="http://img.ocean2you.co.kr/go/mobile/icon_mapgoole1.png" width="45" height="45"><br>구글맵</a></span>
+		</div>
+	</div>
+	<!--- 지도앱 레이어 --->
+	
+	<script type="text/javascript">
+	$(function() {
+		$('.map_address tr th').click(function() {
+			$('.map_address tr th').removeClass('on');
+			$(this).addClass('on');
+	
+			$('.map_img tr td').hide();
+			$('.map_img tr td').eq($(this).index()).show();
+		});
+	
+		$('.map_img tr td').not(':first').hide();
+		
+		/* 상단 슬라이드 */
+		var swiper = new Swiper('.swiper-container', {
+			scrollbar: '.swiper-scrollbar',	// 스크롤
+			scrollbarHide: false,	// 스크롤 안할때도 스크롤바 숨기지 않음
+			uniqueNavElements: true,
+			loop:true,
+			nextButton: '.swiper-button-next',
+			prevButton: '.swiper-button-prev',
+	
+			autoplayDisableOnInteraction: false,
+			paginationBulletRender: function (index, className) { 
+				return '<span class="' + className + '"></span>'; 
+			}
+		});
+	
+	});
+	
+	function all_price() {
+		$.cookie("all_price_banner", "none", {domain: 'ocean2you.co.kr', path : '/'});
+		location.href='http://ocean2you.co.kr/landing/?dd=SBIsfC5UN0AlIRkeTnc=&pno=HE93';
+	}	
+	
+	function tab_on(id) {
+		$("#detail_tab1 li").each(function(e) {
+			var chk_id = $("#detail_tab1 li").eq(e).attr("id");
+			var str_ex = chk_id.split("_on");
+			$("#detail_tab1 li").eq(e).attr("id", str_ex[0]);
+		});
+		$("#detail_tab1 ."+id).attr("id", id+"_on");
+	}
+	
+	
+	// 고객센터 문의하기 배너
+	function cus_on(obj, st) {
+		if(st == "on") {
+			if(obj == "#q_notice") {
+				$("#q_modal").hide();
+			} else { 
+				var arrPageSizes = ___getPageSize();
+				$("body").append("<div id=\"overlay\"></div>");
+				$("#overlay").css({"background-color":"#000", "opacity":"0.7", "width":arrPageSizes[0], "height":arrPageSizes[1]});
+			}
+			$(obj).css({"z-index": 110 }).show();
+			$("#top_box").css("z-index", "5");
+		} else {
+			$("#overlay").slideUp(function(){ $("#overlay").remove(); });
+			$(obj).hide();
+			$("#top_box").css("z-index", "9999");
+			$("#topSearch").css("z-index", "9999");	
+		}
+	}
+	</script>
+	
+	
+	<script type="text/javascript">
+	
+	
+	</script>
+	
+	
+	
+		</div>
+		
+		<div class="clr"></div>
+	</section>
+	<!-- //#contents -->
+
 
 	@@include('../include/_footer.html') 
 </div>

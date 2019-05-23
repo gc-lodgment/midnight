@@ -6,9 +6,9 @@
 .sec.visual {
     .slider-container {
         position: relative;
-        .slide {
-            height: 319px;
-            background: url('http://img.mipic-festival.co.kr/reservation/visual_01.jpg') no-repeat center;
+        .slide > img {
+            margin: 0 auto;
+            display: block;
         }
     }
 }

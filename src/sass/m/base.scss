@@ -21,22 +21,14 @@
 	display: none !important;
 }
 /* 고코투어 예약페이지 재정의 */
-#contents {
-	margin-top: 0;
-	border-top: 3px solid #717171;
-	img, input, button, select, textarea {
-		margin:0; padding:0; vertical-align:middle
-	}
-	#main5 .goods_info .tit2,
-	#main5 .goods_info .contents,
-	#tour_taste td {
-		vertical-align: middle;
-	}
+section.reservation td,
+section.reservation img {
+	vertical-align: middle;
 }
 /* 로그인 재정의 */
-#customer {position: relative; margin: 150px auto; padding: 15px 25px 35px; width:740px; background:#fff; border:1px solid #dedede; letter-spacing:-0.1px; font-family: "Nanum Gothic", sans-serif;}
+#customer {position: relative; margin-top: 0px; box-sizing: border-box; padding: 15px 20px 35px; width: 310px; margin: 15px auto; background:#fff; border:1px solid #dedede; letter-spacing:-0.1px; font-family: "Nanum Gothic", sans-serif;}
 #customer .Login {}
-#customer .Login .naverLogin h4 {font-size:18px; color:#5a2400; font-weight: 400; margin-bottom: 25px;}
+#customer .Login .naverLogin h4 {font-size:18px; color:#5a2400; font-weight: 400; margin-bottom: 25px; text-align: center;}
 #customer .Login .naverLogin .snsLarge {margin:auto; width:268px}
 #customer .Login .naverLogin .snsLarge ul {margin:auto; width:268px}
 #customer .Login .naverLogin .snsLarge li {text-align:center; letter-spacing:-0.3px; font-weight:600; line-height:55px; font-size:15px; margin-bottom: 10px;}
@@ -58,9 +50,22 @@
 
 #customer .Login .naverLogin .alert {margin-top: 30px; text-align: center;}
 #customer .Login .naverLogin .alert .img, #customer .Login .naverLogin .alert .text {display: inline-block; vertical-align: top;}
-#customer .Login .naverLogin .alert .img {width:42px}
-#customer .Login .naverLogin .alert .text {padding-left:10px;line-height:18px; font-size: 13px; text-align: left;}
-#customer .Login .naverLogin .alert .text span {color:#ff610a}	
+#customer .Login .naverLogin .alert .img {width:42px; display: none;}
+#customer .Login .naverLogin .alert .text {padding-left:10px;line-height:18px; font-size: 13px; text-align: left; word-break: keep-all;}
+#customer .Login .naverLogin .alert .text span {color:#ff610a;}
+
+/* 예매확인 재정의 */
+section.history .his-tab, section.history .his-tab * {box-sizing: border-box;}
+// section.history {position: relative; padding: 0 0 40px; background: #f1f1f1;}
+section.history {position: relative; padding: 0 0 40px;}
+section.history .container {position: relative; width: 100%; padding: 8px 0; background: #fff;}
+section.history .his-tab {position: relative; width: 100%; height: 36px;}
+section.history .his-tab > li {position: relative; width: 33.33%; float: left; height: 100%; border: 1px solid #b7bfc8; border-right: none; background: #fff;}
+section.history .his-tab > li:first-child {border-left-width: none;}
+section.history .his-tab > li .btn-a {color: #6c7580; display: block; height: 100%; text-align: center; font-weight: 600; font-size: 13px; letter-spacing: -1px;}
+section.history .his-tab > li .btn-a:after {content: ""; display: inline-block; height: 107%; vertical-align: middle;}
+section.history .his-tab > li.on .btn-a {background: #44a8ff;}
+section.history .his-tab > li.on .btn-a {color: #fff;}
 
 .group-m {
 	position: relative;

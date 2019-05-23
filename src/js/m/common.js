@@ -9,10 +9,10 @@ function headerFunc () {
 	var navTab	= $(".nav-tab"),
 		gNav	= $(".g-nav"),
 		bgDrop	= $(".bg-drop");
-	navTab.click(function() {
+	navTab.on('click', function() {
 		gNav.addClass("on");
 	});
-	gNav.find(".bg-drop, .i-x").click(function() {
+	gNav.find(".bg-drop, .i-x, .menu > li > a").on('click', function() {
 		gNav.removeClass("on");
 	});
 }

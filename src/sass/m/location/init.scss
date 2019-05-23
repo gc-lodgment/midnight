@@ -2,16 +2,6 @@
 
 @import "../parts/common";
 
-/* 비주얼 영역 */
-.sec.visual {
-    .slider-container {
-        position: relative;
-        .slide {
-            height: 319px;
-            background: url('http://img.mipic-festival.co.kr/location/visual_01.jpg') no-repeat center;
-        }
-    }
-}
 /* 공통 스타일 영역 */
 .sec.common-01 {
     .row-txt {
@@ -37,12 +27,12 @@
         overflow: hidden;
         .map-desc {
             dl {
-                margin-top: 20px;
+                margin-top: 10px;
+                padding:0 10px;
                 font-size: 0;
                 line-height: 1.4;
-                > * {
-                    // display: inline-block;
-                    // vertical-align: top;
+                dt, dd {
+                    word-break: keep-all;
                 }
                 dt {
                     // width: 160px;
@@ -50,10 +40,15 @@
                     font-weight: 700;
                 }
                 dd {
-                    // display: 800px;
                     font-size: 12px;
+                    .p-1 {
+
+                    }
+                    .p-2 {
+                        padding-left: 10px;
+                    }
                     .map-park {
-                        margin-top: 20px;
+                        margin-top: 10px;
                     }
                 }
             }
@@ -66,22 +61,26 @@
     .faq-box {
         padding-bottom: 35px;
         dl {
-            margin-top: 20px;
+            margin-top: 10px;
+            padding:0 10px;
             line-height: 1.4;
             font-size: 0;
             dt, dd {
+                word-break: keep-all;
                 > span {
                     @include dp;
                     vertical-align: top;
                 }
+                $w: 20px;
+                $m: 8px;
                 .q, .a {
-                    @include sizes(33px);
-                    margin-right: 10px;
-                    top: -5px;
+                    @include sizes($w);
+                    margin-right: $m;
+                    top: -2px;
                     border-radius: 50%;
-                    line-height: 34px;
+                    line-height: 20px;
                     text-align: center;
-                    font-size: 20px;
+                    font-size: 12px;
                     color: #fff;
                 }
                 .q {
@@ -91,16 +90,16 @@
                     background: #a0a0a0;
                 }
                 .txt {
-                    width: 910px;
+                    width: calc( 100% - (#{$w} + #{$m} + 5px) );
                 }
             }
             dt {
-                font-size: 20px;
+                .txt {font-size: 12.5px;}
             }
             dd {
                 margin-top: 5px;
                 line-height: 1.5;
-                font-size: 16px;
+                .txt {font-size: 12px;}
             }
         }
     }

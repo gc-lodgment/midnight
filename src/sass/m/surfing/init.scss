@@ -2,16 +2,6 @@
 
 @import "../parts/common";
 
-/* 비주얼 영역 */
-.sec.visual {
-    .slider-container {
-        position: relative;
-        .slide > img {
-            margin: 0 auto;
-            display: block;
-        }
-    }
-}
 /* 공통스타일 영역 */
 .sec.common-01 {
     .row-txt {

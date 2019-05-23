@@ -1,0 +1,234 @@
+@@include('../include/_head.html', {
+	"page": "reservation"
+})
+
+	<!--페이지 전용 Css & Script-->
+	<link rel="stylesheet" href="http://static.ocean2you.co.kr/css/new/mobile_layout3.css">
+	<link rel="stylesheet" href="http://static.ocean2you.co.kr/css/go/history_m.css">
+	<link rel="stylesheet" href="http://static.ocean2you.co.kr/go/css/totalmobile.css">
+	
+	<script src="http://static.ocean2you.co.kr/js/go/history_m.js"></script>
+	
+</head>
+<body class="page-reservation">
+
+<div class="wrapper">
+	@@include('../include/_header.html')
+
+	<div class="contents reservation">
+		<section class="sec visual">
+			<h1 class="skip">미드나잇 피크닉 페스티벌 2019</h1>
+			<div class="slider-container">
+				<ul class="slider">
+					<li class="slide"><img src="http://img.mipic-festival.co.kr/m/reservation/visual_01.jpg" alt="미드나잇피크닛 페스티벌"></li>
+				</ul>
+			</div>
+		</section>
+		<!--/.visual-->
+		<section class="sec common-01 ticket">
+			<div class="row-day">
+				<h1 class="group ta-left">
+					<span class="s-1">미픽2019 - 티켓예매</span><br>
+					<span class="s-2">TICKET</span>
+				</h1>
+			</div>
+		</section>
+	</div>
+	<!--//.contents-->
+	
+	<!-- 예약페이지 가져오기 , 아래 부분은 개발단에서 작업(아래는 예시)-->
+	<section class="history" id="setTop">			
+		<div class="clr"></div>
+<!--추가내용_170605 예약내역 레이어팝업 -->
+<div class="layer-pop-bg" id="layer-pop-bg" style="display:none">
+    <!--조회-->
+    <div id="r-lookup">
+        <h2>예약내역 조회<a href="javascript: void(0)" class="clsBtn" onclick="layer_close();"></a></h2>
+        <p class="nth-1">예약하신 휴대폰 번호를 입력해주세요</p>
+        <p class="nth-2">
+            <input type="tel" name="tel1" id="tel1" maxlength="3" onkeyup="utils.checknum('tel1', 'tel2', '2')"><span></span><input type="tel" name="tel2" id="tel2" maxlength="4" onkeyup="utils.checknum('tel2', 'tel3', '3')"><span></span><input type="tel" name="tel3" id="tel3" maxlength="4">
+        </p>
+        <p class="nth-3"><a href="#" id="find_reserve">검 색</a></p>
+    </div>
+    
+    <div id="r-confirm" style="display:none">
+        <h2>예약내역 확인<a href="javascript: void(0)" class="clsBtn" onclick="layer_close();"></a></h2>
+        <p class="nth-1">고객님의 예약정보를 확인해주세요</p>
+        <div class="inner-box" id="inner-box">
+            <p class="nth-1">고객님은<br><span class="f-bd"></span>로<br>로그인 후 예약하셨습니다.</p>
+            <p class="nth-2"><a href="#">네이버 아이디로 로그인</a></p>
+        </div>
+    </div>
+</div>
+<!--추가내용_170605 예약내역 레이어팝업 끝-->
+
+
+<!-- 변경내용 시작 -->
+<div class="container">
+	<ul class="his-tab clr" id="his-tab">
+		<li id="tab1" class="on"><a href="javascript:;" class="btn-a">이용가능</a></li>
+		<li id="tab2"><a href="javascript:;" class="btn-a">이용완료</a></li>
+		<li id="tab3"><a href="javascript:;" class="btn-a">환불/취소</a></li>
+	</ul>
+</div>
+
+<div class="history01-list" id="order_layout" style="min-height:150px">
+			<div class="nb-wrap">
+			<div class="non-box">
+				<img src="http://img.ocean2you.co.kr/go/mobile/h_1.png" alt="느낌표">
+				<strong>예약내역이 없습니다.</strong>
+				<div class="non-box-ntcbox" onclick="layer_show();">
+					구매하신 예약건이 보이지 않는다면,<br>
+					<span>여기를 클릭</span>하여 확인하세요.
+				</div>
+				
+			</div><script type="text/javascript">
+						function all_price() {
+							//$.cookie("all_price_banner", "none", {domain: 'ocean2you.co.kr', path : '/'});
+							location.href='http://ocean2you.co.kr/landing/?dd=SBIsfC5UN0AlIRkeTnc=&pno=';
+						}
+					</script>
+			</div>
+			</div>
+
+
+
+<script type="text/javascript">
+$(function() {
+	$('#headTitle .delete').click(function(){
+		$(this).toggleClass('on');
+		if ($(this).hasClass('on')) {
+			$('.history01-list > ul > li .chk').show();
+			$("#fixdelete").show();
+		} else {
+			$('.history01-list > ul > li .chk').hide();
+			$("#fixdelete").hide();
+		}
+	});
+
+	$("#his-tab li").click(function(e) {
+		e.preventDefault();
+
+		$("#his-tab li").removeClass("on");
+		if($(this).hasClass("on") == false) {
+			$(this).addClass("on");
+		}
+		
+		if($(this).attr("id") == "tab1") {
+			$("#list_delete").hide();
+		} else {
+			$("#list_delete").show();
+		}
+		order_show($(this).attr("id"), "1");
+	});
+
+	$("#tab1").click();
+
+	
+	$("#find_reserve").click(function(e) {
+		e.preventDefault();
+		if($("#tel1").val() == "") {
+			alert("연락처를 입력하세요.");
+			$("#tel1").focuse();
+			return;
+		}
+
+		if($("#tel2").val() == "") {
+			alert("연락처를 입력하세요.");
+			$("#tel2").focuse();
+			return;
+		}
+
+		if($("#tel3").val() == "") {
+			alert("연락처를 입력하세요.");
+			$("#tel3").focuse();
+			return;
+		}
+
+		$.ajax({
+			url : "/reservation/state_order.php",
+			type: "post",
+			data: "mode=find_reserve_id&tel1="+$("#tel1").val()+"&tel2="+$("#tel2").val()+"&tel3="+$("#tel3").val(),
+			success: function(e) {
+				$("#r-lookup").hide();
+				$("#inner-box").html(e);
+				$("#r-confirm").show();
+
+
+			}
+		})
+	});
+
+
+});
+
+function layer_show() {
+	$("#layer-pop-bg").show();
+	$("#tel1").focus();
+}
+
+function layer_close() {
+	$("#layer-pop-bg").hide();
+	$("#r-lookup").show();
+	$("#inner-box").html();
+	$("#r-confirm").hide();
+	$("#tel1").val("");
+	$("#tel2").val("");
+	$("#tel3").val("");
+}
+
+function order_show(id, page) {
+	
+	$.ajax({
+		url : "state_order.php",
+		data: "mode=order_list&sub_mode="+id+"&page_="+page,
+		type : "post",
+		success: function(e) {
+			$(window).scrollTop(0);
+			$("#order_layout").html(e);
+
+			$('.history01-list > ul > li .chk').click(function(){
+				$(this).toggleClass('on');
+			});
+
+
+			$("#fixdelete").click(function() {
+				var str = "";
+				var cnt = "";
+				$('.history01-list > ul > li .chk').each(function(i) {
+					if($('.history01-list > ul > li .chk').eq(i).hasClass("on") == true) {
+						str += "&rnum_chk[]="+$('.history01-list > ul > li .chk').eq(i).attr("id");
+						cnt += 1;
+					}
+				});
+
+				if(cnt == 0) {
+					alert("삭제 할 예약건을 선택하세요.");
+					return;					
+				}
+
+				$.ajax({
+					url : "state_order.php",
+					data: "mode=hide_list&"+str,
+					type: "post",
+					success: function(e) {
+						alert(e);
+						location.reload();
+					}					
+				});
+			});
+		}
+	});
+}
+</script>
+
+		<div class="clr"></div>			
+	</section>
+	<!-- //#contents -->
+
+
+	@@include('../include/_footer.html') 
+</div>
+
+</body>
+</html>
