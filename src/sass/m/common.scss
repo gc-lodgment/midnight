@@ -40,6 +40,7 @@ body {
 }
 @media (min-width: 768px) {
 	// .header, 
+	.bn-item,
 	.header .gnb {
 		width: 768px !important;
 		left: 50% !important;
@@ -262,6 +263,59 @@ body {
 	}
 }
 
+/* 배너 영역 */
+.bn-container {
+    z-index: 51;
+    a {
+        display: block;
+	}
+	&.bottom {
+		width: 100%;
+	}
+	&.rsv-mipic {
+		$h-rsvMipic: 55px;
+		$c-green: #a5fc00;
+		height: $h-rsvMipic;
+		a.rsv-mipic {
+			@include position(fixed, null, 0, 0);
+			width: 100%;
+			height: $h-rsvMipic;
+			background: #000;
+			text-align: center;
+			color: #fff;
+			// font-weight: 700;
+			line-height: $h-rsvMipic;
+			> span {
+				@include va;
+				font-size: 18px;
+			}
+			.s-2 {
+				color: $c-green;
+			}
+			.s-3 {
+				margin-left: 2px;
+				top: -2px;
+				.s-tbl {
+					@include sizes(26px);
+					display: table;
+					border-radius: 50%;
+					background: $c-green;
+					line-height: normal;
+					.s-cell {
+						display: table-cell;
+						position: relative;
+						top: 1px;
+						vertical-align: middle;
+						font-size: 13px;
+						color: #000;
+						font-weight: 800;
+					}
+				}
+			}
+		}
+	}
+}
+
 /*TOP버튼*/
 .btn-top {
 	display: block;
@@ -340,8 +394,4 @@ body {
 			width: 100%;
         }
     }
-}
-/* 배너 영역 */
-.bn-container {
-
 }

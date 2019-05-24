@@ -99,12 +99,12 @@
                 }
             }
             dt {
-                font-size: 20px;
+                .txt {font-size: 20px;}
             }
             dd {
                 margin-top: 5px;
                 line-height: 1.5;
-                font-size: 16px;
+                .txt {font-size: 16px;}
             }
         }
     }

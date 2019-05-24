@@ -171,8 +171,10 @@ body {
     a {
         display: block;
     }
-    .rsv-mipic {
-        @include position(absolute, 1340px, 50%);
-        margin-left: 525px;
+    &.rsv-mipic {
+        a.rsv-mipic {
+            @include position(absolute, 1340px, 50%);
+            margin-left: 525px;
+        }
     }
 }

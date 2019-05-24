@@ -69,12 +69,19 @@
         }
     }
     .mv-box {
-        $h: 180px;
+        $h: 203px;
         height: $h;
         iframe {
             @include size(100%, $h);
         }
     }
+    // .mv-box {
+    //     $h: 180px;
+    //     height: $h;
+    //     iframe {
+    //         @include size(100%, $h);
+    //     }
+    // }
     .photo-box {
         overflow: hidden;
         .list {
