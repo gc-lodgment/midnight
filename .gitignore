@@ -7,6 +7,7 @@ _media/
 _tmp/
 img/
 dist/
+.vscode/
 
 # Logs
 logs

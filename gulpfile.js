@@ -35,7 +35,7 @@ gulp.task('browserSync', ['template', 'sass', 'js'], function() {
 });
 gulp.task('browserSync_m', ['template_m', 'sass', 'js'], function() {
 	return browserSync.init({
-		port: 3001,
+		port: 3005,
 		server: {
 			baseDir: './dist'
 		}
@@ -112,11 +112,11 @@ gulp.task('sass', function() {
 	return gulp.src( config.sass.src )
 		.pipe( plumber() )
 		.pipe(sourcemaps.init())
-		.pipe( sass({outputStyle: 'compact'}).on('error', sass.logError)) // {outputStyle: nested} expanded, compact, compressed
-        .pipe(autoprefixer({
-			browsers: ['last 2 versions'],
-            cascade: false
-        }))
+		.pipe( sass({outputStyle: 'compact'}).on('error', sass.logError)) 
+        // .pipe(autoprefixer({
+		// 	browsers: ['last 2 versions'],
+        //     cascade: false
+        // }))
 		.pipe(sourcemaps.write())
 		.pipe( gulp.dest( config.sass.dest) )
 		.pipe(browserSync.stream({ match: '**/*.css' }));
